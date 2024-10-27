@@ -8,44 +8,58 @@ import net.minecraft.advancement.AdvancementCriterion;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.client.gui.screen.recipebook.RecipeBookProvider;
-import net.minecraft.data.server.recipe.*;
+import net.minecraft.data.server.recipe.RecipeExporter;
+import net.minecraft.data.server.recipe.RecipeGenerator;
+import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.StonecuttingRecipeJsonBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.predicate.item.ItemPredicate;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.recipe.RecipeInputProvider;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.*;
-import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.registry.entry.RegistryEntryList;
-import net.minecraft.registry.tag.TagKey;
 
-import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
-import java.util.stream.Stream;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
+    private static RegistryEntryLookup<Item> itemLookup;
+
     public ModRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
 
     }
 
+    public static AdvancementCriterion<InventoryChangedCriterion.Conditions> conditionsFromItem(ItemConvertible item) {
+        return RecipeGenerator.conditionsFromPredicates(ItemPredicate.Builder.create().items(itemLookup, item));
+    }
+
     @Override
     protected RecipeGenerator getRecipeGenerator(RegistryWrapper.WrapperLookup registries, RecipeExporter exporter) {
+        itemLookup = registries.getOrThrow(RegistryKeys.ITEM);
         return new RecipeGenerator(registries, exporter) {
+            public static String hasItem(ItemConvertible item) {
+                return "has_" + getItemPath(item);
+            }
 
-            RegistryEntryLookup<Item> itemLookup = registries.getOrThrow(RegistryKeys.ITEM);
+            public static String getItemPath(ItemConvertible item) {
+                return Registries.ITEM.getId(item.asItem()).getPath();
+            }
+
+            public static String convertBetween(ItemConvertible to, ItemConvertible from) {
+                return getItemPath(to) + "_from_" + getItemPath(from);
+            }
+
+            public static void offerCuttingRecipe(RecipeExporter exporter, RecipeCategory category, ItemConvertible output, ItemConvertible input, int count) {
+                StonecuttingRecipeJsonBuilder.createStonecutting(Ingredient.ofItem(input), category, output, count).criterion(RecipeGenerator.hasItem(input), ModRecipeProvider.conditionsFromItem(input)).offerTo(exporter, RecipeGenerator.convertBetween(output, input) + "_stonecutting");
+            }
 
             @Override
             public void generate() {
-
-
                 ShapedRecipeJsonBuilder.create(itemLookup, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GALVANIZED_SQUARE_STEEL_BLOCK, 1)
-                        .input(Character.valueOf('G'), ModBlocks.GALVANIZED_SQUARE_STEEL)
-                        .input(Character.valueOf('B'), ModBlocks.GALVANIZED_SQUARE_STEEL_BEAM)
-                        .input(Character.valueOf('S'), ModItems.BORROWED_SCREWS)
+                        .input('G', ModBlocks.GALVANIZED_SQUARE_STEEL)
+                        .input('B', ModBlocks.GALVANIZED_SQUARE_STEEL_BEAM)
+                        .input('S', ModItems.BORROWED_SCREWS)
                         .pattern("SGS")
                         .pattern("GBG")
                         .pattern("SGS")
@@ -53,7 +67,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
 
                 ShapedRecipeJsonBuilder.create(itemLookup, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GALVANIZED_SQUARE_STEEL_BEAM, 1)
-                        .input(Character.valueOf('#'), Items.IRON_INGOT)
+                        .input('#', Items.IRON_INGOT)
                         .pattern("#")
                         .pattern("#")
                         .pattern("#")
@@ -61,32 +75,32 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
 
                 ShapedRecipeJsonBuilder.create(itemLookup, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GALVANIZED_SQUARE_STEEL, 4)
-                        .input(Character.valueOf('#'), ModBlocks.GALVANIZED_SQUARE_STEEL_BEAM)
-                        .input(Character.valueOf('S'), ModItems.BORROWED_SCREWS)
+                        .input('#', ModBlocks.GALVANIZED_SQUARE_STEEL_BEAM)
+                        .input('S', ModItems.BORROWED_SCREWS)
                         .pattern("S#S")
                         .pattern("#S#")
                         .pattern("S#S")
                         .criterion("has_iron_ingot", this.conditionsFromItem(Items.IRON_INGOT)).offerTo(exporter);
 
                 ShapedRecipeJsonBuilder.create(itemLookup, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GALVANIZED_SQUARE_STEEL_GRATE, 4)
-                        .input(Character.valueOf('#'), ModBlocks.GALVANIZED_SQUARE_STEEL_BEAM)
-                        .input(Character.valueOf('S'), ModItems.BORROWED_SCREWS)
+                        .input('#', ModBlocks.GALVANIZED_SQUARE_STEEL_BEAM)
+                        .input('S', ModItems.BORROWED_SCREWS)
                         .pattern("#S#")
                         .pattern("S#S")
                         .pattern("#S#")
                         .criterion("has_iron_ingot", this.conditionsFromItem(Items.IRON_INGOT)).offerTo(exporter);
 
                 ShapedRecipeJsonBuilder.create(itemLookup, RecipeCategory.MISC, ModItems.BORROWED_SCREWS, 4)
-                        .input(Character.valueOf('I'), Items.IRON_INGOT)
-                        .input(Character.valueOf('N'), Items.IRON_NUGGET)
+                        .input('I', Items.IRON_INGOT)
+                        .input('N', Items.IRON_NUGGET)
                         .pattern("  ")
                         .pattern(" I")
                         .pattern("N ")
                         .criterion("has_iron_ingot", this.conditionsFromItem(Items.IRON_INGOT)).offerTo(exporter);
 
                 ShapedRecipeJsonBuilder.create(itemLookup, RecipeCategory.TOOLS, ModItems.MORSMORDRE_CRAZY_DONKEY_MUSIC_DISC, 1)
-                        .input(Character.valueOf('B'), ModItems.BORROWED_SCREWS)
-                        .input(Character.valueOf('G'), ModBlocks.GALVANIZED_SQUARE_STEEL)
+                        .input('B', ModItems.BORROWED_SCREWS)
+                        .input('G', ModBlocks.GALVANIZED_SQUARE_STEEL)
                         .pattern("GGG")
                         .pattern("GBG")
                         .pattern("GGG")
@@ -152,8 +166,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_AZALEA_LEAF_VENEERS, 16, Blocks.AZALEA_LEAVES, "has_azalea_leaves", exporter);
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_FLOWERING_AZALEA_LEAF_VENEERS, 16, Blocks.FLOWERING_AZALEA_LEAVES, "has_flowering_azalea_leaves", exporter);
                 ShapedRecipeJsonBuilder.create(itemLookup, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_BAMBOO_LEAF_VENEERS, 16)
-                        .input(Character.valueOf('B'), Items.BAMBOO)
-                        .input(Character.valueOf('L'), Items.STRING)
+                        .input('B', Items.BAMBOO)
+                        .input('L', Items.STRING)
                         .pattern("BLB")
                         .pattern("LBL")
                         .pattern("BLB")
@@ -465,10 +479,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
             }
 
-
             private void offerStairsRecipe(ItemConvertible input, ItemConvertible output, String criterion, RecipeExporter exporter) {
                 ShapedRecipeJsonBuilder.create(itemLookup, RecipeCategory.BUILDING_BLOCKS, output, 4)
-                        .input(Character.valueOf('#'), input)
+                        .input('#', input)
                         .pattern("#  ")
                         .pattern("## ")
                         .pattern("###")
@@ -477,7 +490,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
             private void offerSlabRecipe(ItemConvertible input, ItemConvertible output, String criterion, RecipeExporter exporter) {
                 ShapedRecipeJsonBuilder.create(itemLookup, RecipeCategory.BUILDING_BLOCKS, output, 6)
-                        .input(Character.valueOf('#'), input)
+                        .input('#', input)
                         .pattern("   ")
                         .pattern("   ")
                         .pattern("###")
@@ -486,8 +499,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
             private void offerFenceRecipe(ItemConvertible inputWood, ItemConvertible output, String criterion, RecipeExporter exporter) {
                 ShapedRecipeJsonBuilder.create(itemLookup, RecipeCategory.BUILDING_BLOCKS, output, 3)
-                        .input(Character.valueOf('#'), Items.STICK)
-                        .input(Character.valueOf('@'), inputWood)
+                        .input('#', Items.STICK)
+                        .input('@', inputWood)
                         .pattern("   ")
                         .pattern("@#@")
                         .pattern("@#@")
@@ -496,8 +509,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
             private void offerFenceGateRecipe(ItemConvertible inputWood, ItemConvertible output, String criterion, RecipeExporter exporter) {
                 ShapedRecipeJsonBuilder.create(itemLookup, RecipeCategory.BUILDING_BLOCKS, output, 3)
-                        .input(Character.valueOf('#'), Items.STICK)
-                        .input(Character.valueOf('@'), inputWood)
+                        .input('#', Items.STICK)
+                        .input('@', inputWood)
                         .pattern("   ")
                         .pattern("#@#")
                         .pattern("#@#")
@@ -506,16 +519,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
             private void offerChandelierRecipe(ItemConvertible inputCandle, ItemConvertible output, RecipeExporter exporter) {
                 ShapedRecipeJsonBuilder.create(itemLookup, RecipeCategory.DECORATIONS, output, 1)
-                        .input(Character.valueOf('#'), Items.IRON_INGOT)
-                        .input(Character.valueOf('*'), Items.IRON_NUGGET)
-                        .input(Character.valueOf('@'), inputCandle)
+                        .input('#', Items.IRON_INGOT)
+                        .input('*', Items.IRON_NUGGET)
+                        .input('@', inputCandle)
                         .pattern(" * ")
                         .pattern("@#@")
                         .pattern("#*#")
                         .criterion("has_candle", this.conditionsFromItem(inputCandle))
                         .criterion("has_iron_ingot", this.conditionsFromItem(Items.IRON_INGOT)).offerTo(exporter);
             }
-
 
             private void offerCuttingGroupRecipe(RecipeExporter exporter, ItemConvertible inputLog, ItemConvertible inputPlanks,
                                                  ItemConvertible outputLogVeneers,
@@ -564,32 +576,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 return ShapedRecipeJsonBuilder.create(itemLookup, category, output, count);
             }
 
-
-
             public void offerWallRecipe(RecipeCategory category, ItemConvertible output, ItemConvertible input, RecipeExporter exporter) {
                 this.getWallRecipe(category, output, Ingredient.ofItem(input)).criterion(hasItem(input), this.conditionsFromItem(input)).offerTo(exporter);
             }
 
-            public static String hasItem(ItemConvertible item) {
-                return "has_" + getItemPath(item);
-            }
-
-            public static String getItemPath(ItemConvertible item) {
-                return Registries.ITEM.getId(item.asItem()).getPath();
-            }
-
-            public static String convertBetween(ItemConvertible to, ItemConvertible from) {
-                return getItemPath(to) + "_from_" + getItemPath(from);
-            }
-
-            public static void offerCuttingRecipe(RecipeExporter exporter, RecipeCategory category, ItemConvertible output, ItemConvertible input, int count) {
-                StonecuttingRecipeJsonBuilder.createStonecutting(Ingredient.ofItem(input), category, output, count).criterion(RecipeGenerator.hasItem(input), (AdvancementCriterion) ModRecipeProvider.conditionsFromItem(input)).offerTo(exporter, RecipeGenerator.convertBetween(output, input) + "_stonecutting");
-            }
-
             private void offerChainRecipe(ItemConvertible inputMiddle, ItemConvertible inputTopBottom, ItemConvertible output, int amount, String criterion, RecipeExporter exporter) {
                 ShapedRecipeJsonBuilder.create(itemLookup, RecipeCategory.BUILDING_BLOCKS, output, amount)
-                        .input(Character.valueOf('@'), inputMiddle)
-                        .input(Character.valueOf('#'), inputTopBottom)
+                        .input('@', inputMiddle)
+                        .input('#', inputTopBottom)
                         .pattern("#")
                         .pattern("@")
                         .pattern("#")
@@ -598,71 +592,50 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
             private void offerEcoFriendlyWoodVeneersRecipe(RecipeCategory category, Block output, int count, Block input, String criterion, RecipeExporter exporter) {
 
-                ShapedRecipeJsonBuilder.create(itemLookup, category, (ItemConvertible) output, count)
-                        .input(Character.valueOf('#'), (ItemConvertible) input)
+                ShapedRecipeJsonBuilder.create(itemLookup, category, output, count)
+                        .input('#', input)
                         .pattern("###")
                         .pattern("###")
                         .pattern("###")
-                        .criterion(criterion, this.conditionsFromItem((ItemConvertible) input)).offerTo(exporter);
+                        .criterion(criterion, this.conditionsFromItem(input)).offerTo(exporter);
             }
 
             private void offerCrossRecipe(RecipeCategory category, Block output, int count, Block inputCross, Block inputX, String criterion, RecipeExporter exporter) {
 
-                ShapedRecipeJsonBuilder.create(itemLookup, category, (ItemConvertible) output, count)
-                        .input(Character.valueOf('#'), (ItemConvertible) inputCross)
-                        .input(Character.valueOf('*'), (ItemConvertible) inputX)
+                ShapedRecipeJsonBuilder.create(itemLookup, category, output, count)
+                        .input('#', inputCross)
+                        .input('*', inputX)
                         .pattern("#*#")
                         .pattern("*#*")
                         .pattern("#*#")
-                        .criterion(criterion, this.conditionsFromItem((ItemConvertible) inputX)).offerTo(exporter);
+                        .criterion(criterion, this.conditionsFromItem(inputX)).offerTo(exporter);
             }
 
             private void offerTableSawBlockRecipe(RecipeCategory category, Block output, int count, Block inputLog, Block inputPlanks, Item inputSaw, String criterion1, String criterion2, RecipeExporter exporter) {
 
-                ShapedRecipeJsonBuilder.create(itemLookup, category, (ItemConvertible) output, count)
-                        .input(Character.valueOf('#'), (ItemConvertible) inputLog)
-                        .input(Character.valueOf('*'), (ItemConvertible) inputPlanks)
-                        .input(Character.valueOf('@'), (ItemConvertible) inputSaw)
+                ShapedRecipeJsonBuilder.create(itemLookup, category, output, count)
+                        .input('#', inputLog)
+                        .input('*', inputPlanks)
+                        .input('@', inputSaw)
                         .pattern("*@*")
                         .pattern("# #")
                         .pattern("# #")
-                        .criterion(criterion1, this.conditionsFromItem((ItemConvertible) inputLog))
-                        .criterion(criterion2, this.conditionsFromItem((ItemConvertible) inputSaw)).offerTo(exporter);
+                        .criterion(criterion1, this.conditionsFromItem(inputLog))
+                        .criterion(criterion2, this.conditionsFromItem(inputSaw)).offerTo(exporter);
             }
 
             private void offerLayerRecipe(RecipeCategory category, Block output, int count, Block input, String criterion, RecipeExporter exporter) {
 
-                ShapedRecipeJsonBuilder.create(itemLookup, category, (ItemConvertible) output, count)
-                        .input(Character.valueOf('#'), (ItemConvertible) input)
+                ShapedRecipeJsonBuilder.create(itemLookup, category, output, count)
+                        .input('#', input)
                         .pattern("   ")
                         .pattern("   ")
                         .pattern("###")
-                        .criterion(criterion, this.conditionsFromItem((ItemConvertible) input)).offerTo(exporter);
+                        .criterion(criterion, this.conditionsFromItem(input)).offerTo(exporter);
             }
 
         };
 
-    }
-
-    static RegistryWrapper.WrapperLookup wrapperInstance = new RegistryWrapper.WrapperLookup() {
-        @Override
-        public Stream<RegistryKey<? extends Registry<?>>> streamAllRegistryKeys() {
-            return Stream.empty();
-        }
-
-
-        @Override
-        public <T> Optional<? extends RegistryWrapper.Impl<T>> getOptional(RegistryKey<? extends Registry<? extends T>> registryRef) {
-            return Optional.empty();
-        }
-    };
-
-
-
-
-
-    public static AdvancementCriterion<InventoryChangedCriterion.Conditions> conditionsFromItem(ItemConvertible item) {
-        return RecipeGenerator.conditionsFromPredicates(ItemPredicate.Builder.create().items(wrapperInstance.getOrThrow(RegistryKeys.ITEM), item));
     }
 
     @Override
