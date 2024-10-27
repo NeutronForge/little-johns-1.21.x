@@ -3,7 +3,6 @@ package com.echo.little_johns.item;
 import com.echo.little_johns.LittleJohns;
 import com.echo.little_johns.block.ModBlocks;
 import com.echo.little_johns.block.jukebox.ModJukeboxSongs;
-import com.echo.little_johns.sound.ModSoundEvents;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -22,14 +21,10 @@ import java.util.function.Function;
 public class ModItems {
 
 
-    public static final Item MORSMORDRE_CRAZY_DONKEY_MUSIC_DISC = registerItem("morsmordre_crazy_donkey_music_disc", (settings) -> { return
-            new Item(settings.maxCount(1).rarity(Rarity.RARE).jukeboxPlayable(ModJukeboxSongs.MORSMORDRE_CRAZY_DONKEY));
-    });
+    public static final Item MORSMORDRE_CRAZY_DONKEY_MUSIC_DISC = registerItem("morsmordre_crazy_donkey_music_disc", (settings) ->
+            new Item(settings.maxCount(1).rarity(Rarity.RARE).jukeboxPlayable(ModJukeboxSongs.MORSMORDRE_CRAZY_DONKEY)));
 
-    public static final Item BORROWED_SCREWS = registerItem("borrowed_screws", (settings) -> { return
-            new Item(settings);
-    });
-
+    public static final Item BORROWED_SCREWS = registerItem("borrowed_screws", Item::new);
 
 
     private static void addItemsToToolsItemGroup(FabricItemGroupEntries entries) {
@@ -329,8 +324,9 @@ public class ModItems {
 
 
     public static <T extends Item> T registerItem(String name, Function<Item.Settings, T> factory) {
-        Identifier identifier = Identifier.of(LittleJohns.MOD_ID, name);
-
+        return registerItem(Identifier.of(LittleJohns.MOD_ID, name), factory);
+    }
+    public static <T extends Item> T registerItem(Identifier identifier, Function<Item.Settings, T> factory) {
         return Registry.register(
                 Registries.ITEM,
                 identifier,
