@@ -140,25 +140,74 @@ public class ModItems {
     public static void registerNaturalToVanillaItemGroups() {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(content -> {
-            content.addAfter(Items.OAK_LEAVES, ModBlocks.ECO_FRIENDLY_OAK_LEAF_VENEERS);
-            content.addAfter(Items.SPRUCE_LEAVES, ModBlocks.ECO_FRIENDLY_SPRUCE_LEAF_VENEERS);
-            content.addAfter(Items.BIRCH_LEAVES, ModBlocks.ECO_FRIENDLY_BIRCH_LEAF_VENEERS);
-            content.addAfter(Items.JUNGLE_LEAVES, ModBlocks.ECO_FRIENDLY_JUNGLE_LEAF_VENEERS);
-            content.addAfter(Items.ACACIA_LEAVES, ModBlocks.ECO_FRIENDLY_ACACIA_LEAF_VENEERS);
-            content.addAfter(Items.DARK_OAK_LEAVES, ModBlocks.ECO_FRIENDLY_DARK_OAK_LEAF_VENEERS);
-            content.addAfter(Items.MANGROVE_LEAVES, ModBlocks.ECO_FRIENDLY_MANGROVE_LEAF_VENEERS);
-            content.addAfter(Items.CHERRY_LEAVES, ModBlocks.ECO_FRIENDLY_CHERRY_LEAF_VENEERS);
-            content.addAfter(Items.PALE_OAK_LEAVES, ModBlocks.ECO_FRIENDLY_PALE_OAK_LEAF_VENEERS);
-            content.addAfter(Items.AZALEA_LEAVES, ModBlocks.ECO_FRIENDLY_AZALEA_LEAF_VENEERS);
-            content.addAfter(Items.FLOWERING_AZALEA_LEAVES, ModBlocks.ECO_FRIENDLY_FLOWERING_AZALEA_LEAF_VENEERS);
+            content.addAfter(Items.OAK_LEAVES, ModBlocks.OAK_LEAF_HEDGE);
+            content.addAfter(ModBlocks.OAK_LEAF_HEDGE, ModBlocks.ECO_FRIENDLY_OAK_LEAF_VENEERS);
 
-            content.addAfter(Items.BAMBOO, ModBlocks.ECO_FRIENDLY_BAMBOO_LEAF_VENEERS);
-            content.addAfter(Items.NETHER_WART_BLOCK, ModBlocks.ECO_FRIENDLY_NETHER_WART_VENEERS);
-            content.addAfter(Items.WARPED_WART_BLOCK, ModBlocks.ECO_FRIENDLY_WARPED_WART_VENEERS);
 
-            content.addAfter(Items.MOSS_BLOCK, ModBlocks.ECO_FRIENDLY_MOSS_VENEERS);
-            content.addAfter(Items.PALE_MOSS_BLOCK, ModBlocks.ECO_FRIENDLY_PALE_MOSS_VENEERS);
+            content.addAfter(Items.SPRUCE_LEAVES, ModBlocks.SPRUCE_LEAF_HEDGE);
+            content.addAfter(ModBlocks.SPRUCE_LEAF_HEDGE, ModBlocks.ECO_FRIENDLY_SPRUCE_LEAF_VENEERS);
+
+
+            content.addAfter(Items.BIRCH_LEAVES, ModBlocks.BIRCH_LEAF_HEDGE);
+            content.addAfter(ModBlocks.BIRCH_LEAF_HEDGE, ModBlocks.ECO_FRIENDLY_BIRCH_LEAF_VENEERS);
+
+
+            content.addAfter(Items.JUNGLE_LEAVES, ModBlocks.JUNGLE_LEAF_HEDGE);
+            content.addAfter(ModBlocks.JUNGLE_LEAF_HEDGE, ModBlocks.ECO_FRIENDLY_JUNGLE_LEAF_VENEERS);
+
+
+            content.addAfter(Items.ACACIA_LEAVES, ModBlocks.ACACIA_LEAF_HEDGE);
+            content.addAfter(ModBlocks.ACACIA_LEAF_HEDGE, ModBlocks.ECO_FRIENDLY_ACACIA_LEAF_VENEERS);
+
+
+            content.addAfter(Items.DARK_OAK_LEAVES, ModBlocks.DARK_OAK_LEAF_HEDGE);
+            content.addAfter(ModBlocks.DARK_OAK_LEAF_HEDGE, ModBlocks.ECO_FRIENDLY_DARK_OAK_LEAF_VENEERS);
+
+
+            content.addAfter(Items.MANGROVE_LEAVES, ModBlocks.MANGROVE_LEAF_HEDGE);
+            content.addAfter(ModBlocks.MANGROVE_LEAF_HEDGE, ModBlocks.ECO_FRIENDLY_MANGROVE_LEAF_VENEERS);
+
+
+            content.addAfter(Items.CHERRY_LEAVES, ModBlocks.CHERRY_LEAF_HEDGE);
+            content.addAfter(ModBlocks.CHERRY_LEAF_HEDGE, ModBlocks.ECO_FRIENDLY_CHERRY_LEAF_VENEERS);
+
+
+            content.addAfter(Items.PALE_OAK_LEAVES, ModBlocks.PALE_OAK_LEAF_HEDGE);
+            content.addAfter(ModBlocks.PALE_OAK_LEAF_HEDGE, ModBlocks.ECO_FRIENDLY_PALE_OAK_LEAF_VENEERS);
+
+
+            content.addAfter(Items.AZALEA_LEAVES, ModBlocks.AZALEA_LEAF_HEDGE);
+            content.addAfter(ModBlocks.AZALEA_LEAF_HEDGE, ModBlocks.ECO_FRIENDLY_AZALEA_LEAF_VENEERS);
+
+
+            content.addAfter(Items.FLOWERING_AZALEA_LEAVES, ModBlocks.FLOWERING_AZALEA_LEAF_HEDGE);
+            content.addAfter(ModBlocks.FLOWERING_AZALEA_LEAF_HEDGE, ModBlocks.ECO_FRIENDLY_FLOWERING_AZALEA_LEAF_VENEERS);
+
+
+
+            content.addAfter(ModBlocks.ECO_FRIENDLY_FLOWERING_AZALEA_LEAF_VENEERS, ModBlocks.BAMBOO_LEAVES);
+            content.addAfter(ModBlocks.BAMBOO_LEAVES, ModBlocks.BAMBOO_LEAF_HEDGE);
+            content.addAfter(ModBlocks.BAMBOO_LEAF_HEDGE, ModBlocks.ECO_FRIENDLY_BAMBOO_LEAF_VENEERS);
+
+
+            content.addAfter(Items.NETHER_WART_BLOCK, ModBlocks.NETHER_WART_HEDGE);
+            content.addAfter(ModBlocks.NETHER_WART_HEDGE, ModBlocks.ECO_FRIENDLY_NETHER_WART_VENEERS);
+
+
+            content.addAfter(Items.WARPED_WART_BLOCK, ModBlocks.WARPED_WART_HEDGE);
+            content.addAfter(ModBlocks.WARPED_WART_HEDGE, ModBlocks.ECO_FRIENDLY_WARPED_WART_VENEERS);
+
+
+            content.addAfter(Items.MOSS_BLOCK, ModBlocks.MOSS_HEDGE);
+            content.addAfter(ModBlocks.MOSS_HEDGE, ModBlocks.ECO_FRIENDLY_MOSS_VENEERS);
+
+
+            content.addAfter(Items.PALE_MOSS_BLOCK, ModBlocks.PALE_MOSS_HEDGE);
+            content.addAfter(ModBlocks.PALE_MOSS_HEDGE, ModBlocks.ECO_FRIENDLY_PALE_MOSS_VENEERS);
+
+
             content.addAfter(Items.GRASS_BLOCK, ModBlocks.ECO_FRIENDLY_GRASS_VENEERS);
+
         });
 
     }

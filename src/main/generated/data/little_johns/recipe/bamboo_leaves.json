@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": "minecraft:bamboo",
+    "L": "minecraft:string"
+  },
+  "pattern": [
+    "BLB",
+    "LBL",
+    "BLB"
+  ],
+  "result": {
+    "count": 4,
+    "id": "little_johns:bamboo_leaves"
+  }
+}

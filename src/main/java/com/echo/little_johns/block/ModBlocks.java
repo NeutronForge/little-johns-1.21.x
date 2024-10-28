@@ -18,6 +18,8 @@ import net.minecraft.util.Pair;
 import java.util.function.Function;
 
 public class ModBlocks {
+
+
     // TABLE SAWS
     public static final Block OAK_TABLE_SAW = registerBlockWithItem("oak_table_saw", TableSawBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_WOOD).nonOpaque()).getLeft();
     public static final Block SPRUCE_TABLE_SAW = registerBlockWithItem("spruce_table_saw", TableSawBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_WOOD).nonOpaque()).getLeft();
@@ -31,7 +33,6 @@ public class ModBlocks {
     public static final Block BAMBOO_TABLE_SAW = registerBlockWithItem("bamboo_table_saw", TableSawBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque()).getLeft();
     public static final Block CRIMSON_TABLE_SAW = registerBlockWithItem("crimson_table_saw", TableSawBlock::new, AbstractBlock.Settings.copy(Blocks.CRIMSON_HYPHAE).nonOpaque()).getLeft();
     public static final Block WARPED_TABLE_SAW = registerBlockWithItem("warped_table_saw", TableSawBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_HYPHAE).nonOpaque()).getLeft();
-
 
 
 
@@ -105,6 +106,26 @@ public class ModBlocks {
     public static final Block ECO_FRIENDLY_BAMBOO_LEAF_VENEERS = registerBlockWithItem("eco_friendly_bamboo_leaf_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.JUNGLE_LEAVES).nonOpaque()).getLeft();
     public static final Block ECO_FRIENDLY_NETHER_WART_VENEERS = registerBlockWithItem("eco_friendly_nether_wart_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.NETHER_WART_BLOCK).nonOpaque()).getLeft();
     public static final Block ECO_FRIENDLY_WARPED_WART_VENEERS = registerBlockWithItem("eco_friendly_warped_wart_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_WART_BLOCK).nonOpaque()).getLeft();
+
+
+
+    // LEAF HEDGES
+    public static final Block OAK_LEAF_HEDGE = registerBlockWithItem("oak_leaf_hedge", WallBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).nonOpaque()).getLeft();
+    public static final Block SPRUCE_LEAF_HEDGE = registerBlockWithItem("spruce_leaf_hedge", WallBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_LEAVES).nonOpaque()).getLeft();
+    public static final Block BIRCH_LEAF_HEDGE = registerBlockWithItem("birch_leaf_hedge", WallBlock::new, AbstractBlock.Settings.copy(Blocks.BIRCH_LEAVES).nonOpaque()).getLeft();
+    public static final Block JUNGLE_LEAF_HEDGE = registerBlockWithItem("jungle_leaf_hedge", WallBlock::new, AbstractBlock.Settings.copy(Blocks.JUNGLE_LEAVES).nonOpaque()).getLeft();
+    public static final Block ACACIA_LEAF_HEDGE = registerBlockWithItem("acacia_leaf_hedge", WallBlock::new, AbstractBlock.Settings.copy(Blocks.ACACIA_LEAVES).nonOpaque()).getLeft();
+    public static final Block DARK_OAK_LEAF_HEDGE = registerBlockWithItem("dark_oak_leaf_hedge", WallBlock::new, AbstractBlock.Settings.copy(Blocks.DARK_OAK_LEAVES).nonOpaque()).getLeft();
+    public static final Block MANGROVE_LEAF_HEDGE = registerBlockWithItem("mangrove_leaf_hedge", WallBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_LEAVES).nonOpaque()).getLeft();
+    public static final Block CHERRY_LEAF_HEDGE = registerBlockWithItem("cherry_leaf_hedge", WallBlock::new, AbstractBlock.Settings.copy(Blocks.CHERRY_LEAVES).nonOpaque()).getLeft();
+    public static final Block PALE_OAK_LEAF_HEDGE = registerBlockWithItem("pale_oak_leaf_hedge", WallBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_LEAVES).nonOpaque()).getLeft();
+    public static final Block AZALEA_LEAF_HEDGE = registerBlockWithItem("azalea_leaf_hedge", WallBlock::new, AbstractBlock.Settings.copy(Blocks.AZALEA_LEAVES).nonOpaque()).getLeft();
+    public static final Block FLOWERING_AZALEA_LEAF_HEDGE = registerBlockWithItem("flowering_azalea_leaf_hedge", WallBlock::new, AbstractBlock.Settings.copy(Blocks.FLOWERING_AZALEA_LEAVES).nonOpaque()).getLeft();
+    public static final Block BAMBOO_LEAF_HEDGE = registerBlockWithItem("bamboo_leaf_hedge", WallBlock::new, AbstractBlock.Settings.copy(ModBlocks.BAMBOO_LEAVES).nonOpaque()).getLeft();
+    public static final Block NETHER_WART_HEDGE = registerBlockWithItem("nether_wart_hedge", WallBlock::new, AbstractBlock.Settings.copy(Blocks.NETHER_WART_BLOCK).nonOpaque()).getLeft();
+    public static final Block WARPED_WART_HEDGE = registerBlockWithItem("warped_wart_hedge", WallBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_WART_BLOCK).nonOpaque()).getLeft();
+    public static final Block MOSS_HEDGE = registerBlockWithItem("moss_hedge", WallBlock::new, AbstractBlock.Settings.copy(Blocks.MOSS_BLOCK).nonOpaque()).getLeft();
+    public static final Block PALE_MOSS_HEDGE = registerBlockWithItem("pale_moss_hedge", WallBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_MOSS_BLOCK).nonOpaque()).getLeft();
 
 
     // OTHER VENEERS
@@ -210,6 +231,10 @@ public class ModBlocks {
     public static final Block GOLDEN_GRAND_CHAIN = registerBlockWithItem("golden_grand_chain", GrandChainBlock::new, AbstractBlock.Settings.copy(Blocks.CHAIN).strength(6.0f, 7.0f).nonOpaque().sounds(ModBlockSoundGroup.GRAND_CHAIN)).getLeft();
     public static final Block GOLDEN_COLOSSAL_CHAIN = registerBlockWithItem("golden_colossal_chain", ColossalChainBlock::new, AbstractBlock.Settings.copy(Blocks.CHAIN).strength(8.0f, 10.0f).nonOpaque().sounds(ModBlockSoundGroup.COLOSSAL_CHAIN)).getLeft();
 
+
+
+    // MISC
+    public static final Block BAMBOO_LEAVES = registerBlockWithItem("bamboo_leaves", LeavesBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_LEAVES).nonOpaque()).getLeft();
 
 
 

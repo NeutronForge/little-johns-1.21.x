@@ -31,6 +31,19 @@ public class LittleJohnsClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ECO_FRIENDLY_FLOWERING_AZALEA_LEAF_VENEERS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ECO_FRIENDLY_BAMBOO_LEAF_VENEERS, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.OAK_LEAF_HEDGE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SPRUCE_LEAF_HEDGE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BIRCH_LEAF_HEDGE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.JUNGLE_LEAF_HEDGE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ACACIA_LEAF_HEDGE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DARK_OAK_LEAF_HEDGE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MANGROVE_LEAF_HEDGE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CHERRY_LEAF_HEDGE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PALE_OAK_LEAF_HEDGE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AZALEA_LEAF_HEDGE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FLOWERING_AZALEA_LEAF_HEDGE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BAMBOO_LEAF_HEDGE, RenderLayer.getCutout());
+
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.OAK_TABLE_SAW, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SPRUCE_TABLE_SAW, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BIRCH_TABLE_SAW, RenderLayer.getCutout());
@@ -68,6 +81,9 @@ public class LittleJohnsClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GOLDEN_GRAND_CHAIN, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GOLDEN_COLOSSAL_CHAIN, RenderLayer.getCutout());
 
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BAMBOO_LEAVES, RenderLayer.getCutout());
+
         // NATURAL BLOCK COLOR PROVIDERS
         // GRASS
         ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
@@ -85,37 +101,59 @@ public class LittleJohnsClient implements ClientModInitializer {
                 return FoliageColors.getDefaultColor();
             }
             return BiomeColors.getFoliageColor(world, pos);
-        }, ModBlocks.ECO_FRIENDLY_OAK_LEAF_VENEERS, ModBlocks.ECO_FRIENDLY_JUNGLE_LEAF_VENEERS, ModBlocks.ECO_FRIENDLY_ACACIA_LEAF_VENEERS, ModBlocks.ECO_FRIENDLY_DARK_OAK_LEAF_VENEERS);
+        },
+                ModBlocks.ECO_FRIENDLY_OAK_LEAF_VENEERS, ModBlocks.ECO_FRIENDLY_JUNGLE_LEAF_VENEERS, ModBlocks.ECO_FRIENDLY_ACACIA_LEAF_VENEERS, ModBlocks.ECO_FRIENDLY_DARK_OAK_LEAF_VENEERS,
+                ModBlocks.OAK_LEAF_HEDGE, ModBlocks.JUNGLE_LEAF_HEDGE, ModBlocks.ACACIA_LEAF_HEDGE, ModBlocks.DARK_OAK_LEAF_HEDGE);
 
         ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
             if (world == null || pos == null) {
                 return FoliageColors.getSpruceColor();
             }
             return FoliageColors.getSpruceColor();
-        }, ModBlocks.ECO_FRIENDLY_SPRUCE_LEAF_VENEERS);
+        },
+                ModBlocks.ECO_FRIENDLY_SPRUCE_LEAF_VENEERS,
+                ModBlocks.SPRUCE_LEAF_HEDGE);
 
         ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
             if (world == null || pos == null) {
                 return FoliageColors.getBirchColor();
             }
             return FoliageColors.getBirchColor();
-        }, ModBlocks.ECO_FRIENDLY_BIRCH_LEAF_VENEERS);
+        },
+                ModBlocks.ECO_FRIENDLY_BIRCH_LEAF_VENEERS,
+                ModBlocks.BIRCH_LEAF_HEDGE);
 
         ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
             if (world == null || pos == null) {
                 return FoliageColors.getMangroveColor();
             }
             return BiomeColors.getFoliageColor(world, pos);
-        }, ModBlocks.ECO_FRIENDLY_MANGROVE_LEAF_VENEERS);
+        },
+                ModBlocks.ECO_FRIENDLY_MANGROVE_LEAF_VENEERS,
+                ModBlocks.MANGROVE_LEAF_HEDGE);
 
 
         // NATURAL ITEM COLOR PROVIDERS
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> GrassColors.getDefaultColor(), ModBlocks.ECO_FRIENDLY_GRASS_VENEERS);
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> GrassColors.getDefaultColor(),
+                ModBlocks.ECO_FRIENDLY_GRASS_VENEERS);
 
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> FoliageColors.getDefaultColor(), ModBlocks.ECO_FRIENDLY_OAK_LEAF_VENEERS, ModBlocks.ECO_FRIENDLY_JUNGLE_LEAF_VENEERS, ModBlocks.ECO_FRIENDLY_ACACIA_LEAF_VENEERS, ModBlocks.ECO_FRIENDLY_DARK_OAK_LEAF_VENEERS);
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> FoliageColors.getSpruceColor(), ModBlocks.ECO_FRIENDLY_SPRUCE_LEAF_VENEERS);
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> FoliageColors.getBirchColor(), ModBlocks.ECO_FRIENDLY_BIRCH_LEAF_VENEERS);
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> FoliageColors.getMangroveColor(), ModBlocks.ECO_FRIENDLY_MANGROVE_LEAF_VENEERS);
+
+
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> FoliageColors.getDefaultColor(),
+                ModBlocks.ECO_FRIENDLY_OAK_LEAF_VENEERS, ModBlocks.ECO_FRIENDLY_JUNGLE_LEAF_VENEERS, ModBlocks.ECO_FRIENDLY_ACACIA_LEAF_VENEERS, ModBlocks.ECO_FRIENDLY_DARK_OAK_LEAF_VENEERS,
+                ModBlocks.OAK_LEAF_HEDGE, ModBlocks.JUNGLE_LEAF_HEDGE, ModBlocks.ACACIA_LEAF_HEDGE, ModBlocks.DARK_OAK_LEAF_HEDGE);
+
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> FoliageColors.getSpruceColor(),
+                ModBlocks.ECO_FRIENDLY_SPRUCE_LEAF_VENEERS,
+                ModBlocks.SPRUCE_LEAF_HEDGE);
+
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> FoliageColors.getBirchColor(),
+                ModBlocks.ECO_FRIENDLY_BIRCH_LEAF_VENEERS,
+                ModBlocks.BIRCH_LEAF_HEDGE);
+
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> FoliageColors.getMangroveColor(),
+                ModBlocks.ECO_FRIENDLY_MANGROVE_LEAF_VENEERS,
+                ModBlocks.MANGROVE_LEAF_HEDGE);
 
 
         // SCREEN HANDLERS

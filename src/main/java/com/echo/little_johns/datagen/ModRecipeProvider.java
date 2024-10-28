@@ -170,7 +170,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_PALE_OAK_LEAF_VENEERS, 16, Blocks.PALE_OAK_LEAVES, "has_pale_oak_leaves", exporter);
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_AZALEA_LEAF_VENEERS, 16, Blocks.AZALEA_LEAVES, "has_azalea_leaves", exporter);
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_FLOWERING_AZALEA_LEAF_VENEERS, 16, Blocks.FLOWERING_AZALEA_LEAVES, "has_flowering_azalea_leaves", exporter);
-                ShapedRecipeJsonBuilder.create(itemLookup, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_BAMBOO_LEAF_VENEERS, 16)
+                offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_BAMBOO_LEAF_VENEERS, 16, ModBlocks.BAMBOO_LEAVES, "has_bamboo_leaves", exporter);
+                ShapedRecipeJsonBuilder.create(itemLookup, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BAMBOO_LEAVES, 4)
                         .input('B', Items.BAMBOO)
                         .input('L', Items.STRING)
                         .pattern("BLB")
@@ -210,6 +211,27 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BAMBOO_STEM_WALL, Blocks.BAMBOO_BLOCK, exporter);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRIMSON_HYPHAE_WALL, Blocks.CRIMSON_STEM, exporter);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WARPED_HYPHAE_WALL, Blocks.WARPED_STEM, exporter);
+
+
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OAK_LEAF_HEDGE, Blocks.OAK_LEAVES, exporter);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SPRUCE_LEAF_HEDGE, Blocks.SPRUCE_LEAVES, exporter);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BIRCH_LEAF_HEDGE, Blocks.BIRCH_LEAVES, exporter);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.JUNGLE_LEAF_HEDGE, Blocks.JUNGLE_LEAVES, exporter);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ACACIA_LEAF_HEDGE, Blocks.ACACIA_LEAVES, exporter);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARK_OAK_LEAF_HEDGE, Blocks.DARK_OAK_LEAVES, exporter);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MANGROVE_LEAF_HEDGE, Blocks.MANGROVE_LEAVES, exporter);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHERRY_LEAF_HEDGE, Blocks.CHERRY_LEAVES, exporter);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PALE_OAK_LEAF_HEDGE, Blocks.PALE_OAK_LEAVES, exporter);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AZALEA_LEAF_HEDGE, Blocks.AZALEA_LEAVES, exporter);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FLOWERING_AZALEA_LEAF_HEDGE, Blocks.FLOWERING_AZALEA_LEAVES, exporter);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSS_HEDGE, Blocks.MOSS_BLOCK, exporter);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PALE_MOSS_HEDGE, Blocks.PALE_MOSS_BLOCK, exporter);
+
+
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BAMBOO_LEAF_HEDGE, ModBlocks.BAMBOO_LEAVES, exporter);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.NETHER_WART_HEDGE, Blocks.NETHER_WART_BLOCK, exporter);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WARPED_WART_HEDGE, Blocks.WARPED_WART_BLOCK, exporter);
+
 
 
                 offerFenceRecipe(Blocks.OAK_LOG, ModBlocks.OAK_WOOD_FENCE, "has_oak_log", exporter);

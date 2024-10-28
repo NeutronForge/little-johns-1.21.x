@@ -211,7 +211,35 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ECO_FRIENDLY_NETHER_WART_VENEERS)
                 .add(ModBlocks.ECO_FRIENDLY_WARPED_WART_VENEERS)
                 .add(ModBlocks.ECO_FRIENDLY_MOSS_VENEERS)
-                .add(ModBlocks.ECO_FRIENDLY_PALE_MOSS_VENEERS);
+                .add(ModBlocks.ECO_FRIENDLY_PALE_MOSS_VENEERS)
+
+
+                .add(ModBlocks.OAK_LEAF_HEDGE)
+                .add(ModBlocks.SPRUCE_LEAF_HEDGE)
+                .add(ModBlocks.BIRCH_LEAF_HEDGE)
+                .add(ModBlocks.JUNGLE_LEAF_HEDGE)
+                .add(ModBlocks.ACACIA_LEAF_HEDGE)
+                .add(ModBlocks.DARK_OAK_LEAF_HEDGE)
+                .add(ModBlocks.MANGROVE_LEAF_HEDGE)
+                .add(ModBlocks.CHERRY_LEAF_HEDGE)
+                .add(ModBlocks.PALE_OAK_LEAF_HEDGE)
+                .add(ModBlocks.AZALEA_LEAF_HEDGE)
+                .add(ModBlocks.FLOWERING_AZALEA_LEAF_HEDGE)
+
+                .add(ModBlocks.BAMBOO_LEAF_HEDGE)
+                .add(ModBlocks.NETHER_WART_HEDGE)
+                .add(ModBlocks.WARPED_WART_HEDGE)
+                .add(ModBlocks.MOSS_HEDGE)
+                .add(ModBlocks.PALE_MOSS_HEDGE)
+
+
+
+                .add(ModBlocks.BAMBOO_LEAVES);
+
+
+        // LEAVES TAG
+        getOrCreateTagBuilder(BlockTags.LEAVES)
+                .add(ModBlocks.BAMBOO_LEAVES);
 
         // SHOVEL MINEABLE
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
@@ -279,7 +307,27 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PALE_OAK_WOOD_WALL)
                 .add(ModBlocks.BAMBOO_STEM_WALL)
                 .add(ModBlocks.CRIMSON_HYPHAE_WALL)
-                .add(ModBlocks.WARPED_HYPHAE_WALL);
+                .add(ModBlocks.WARPED_HYPHAE_WALL)
+
+
+
+                .add(ModBlocks.OAK_LEAF_HEDGE)
+                .add(ModBlocks.SPRUCE_LEAF_HEDGE)
+                .add(ModBlocks.BIRCH_LEAF_HEDGE)
+                .add(ModBlocks.JUNGLE_LEAF_HEDGE)
+                .add(ModBlocks.ACACIA_LEAF_HEDGE)
+                .add(ModBlocks.DARK_OAK_LEAF_HEDGE)
+                .add(ModBlocks.MANGROVE_LEAF_HEDGE)
+                .add(ModBlocks.CHERRY_LEAF_HEDGE)
+                .add(ModBlocks.PALE_OAK_LEAF_HEDGE)
+                .add(ModBlocks.AZALEA_LEAF_HEDGE)
+                .add(ModBlocks.FLOWERING_AZALEA_LEAF_HEDGE)
+
+                .add(ModBlocks.BAMBOO_LEAF_HEDGE)
+                .add(ModBlocks.NETHER_WART_HEDGE)
+                .add(ModBlocks.WARPED_WART_HEDGE)
+                .add(ModBlocks.MOSS_HEDGE)
+                .add(ModBlocks.PALE_MOSS_HEDGE);
 
 
         // FENCE BLOCK TAG

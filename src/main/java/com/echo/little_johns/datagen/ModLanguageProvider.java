@@ -98,6 +98,31 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 
 
 
+        translationBuilder.add(ModBlocks.OAK_LEAF_HEDGE,"Oak Leaf Hedge");
+        translationBuilder.add(ModBlocks.SPRUCE_LEAF_HEDGE,"Spruce Leaf Hedge");
+        translationBuilder.add(ModBlocks.BIRCH_LEAF_HEDGE,"Birch Leaf Hedge");
+        translationBuilder.add(ModBlocks.JUNGLE_LEAF_HEDGE,"Jungle Leaf Hedge");
+        translationBuilder.add(ModBlocks.ACACIA_LEAF_HEDGE,"Acacia Leaf Hedge");
+        translationBuilder.add(ModBlocks.DARK_OAK_LEAF_HEDGE,"Dark Oak Leaf Hedge");
+        translationBuilder.add(ModBlocks.MANGROVE_LEAF_HEDGE,"Mangrove Leaf Hedge");
+        translationBuilder.add(ModBlocks.CHERRY_LEAF_HEDGE,"Cherry Leaf Hedge");
+        translationBuilder.add(ModBlocks.PALE_OAK_LEAF_HEDGE,"Pale Oak Leaf Hedge");
+        translationBuilder.add(ModBlocks.AZALEA_LEAF_HEDGE,"Azalea Leaf Hedge");
+        translationBuilder.add(ModBlocks.FLOWERING_AZALEA_LEAF_HEDGE,"Flowering Azalea Leaf Hedge");
+
+        translationBuilder.add(ModBlocks.BAMBOO_LEAF_HEDGE, "Bamboo Leaf Hedge");
+        translationBuilder.add(ModBlocks.NETHER_WART_HEDGE, "Nether Wart Hedge");
+        translationBuilder.add(ModBlocks.WARPED_WART_HEDGE, "Warped Wart Hedge");
+        translationBuilder.add(ModBlocks.MOSS_HEDGE, "Moss Hedge");
+        translationBuilder.add(ModBlocks.PALE_MOSS_HEDGE, "Pale Moss Hedge");
+
+
+
+        translationBuilder.add(ModBlocks.BAMBOO_LEAVES, "Bamboo Leaves");
+
+
+
+
         translationBuilder.add(ModBlocks.OAK_WOOD_WALL,"Oak Wood Wall");
         translationBuilder.add(ModBlocks.SPRUCE_WOOD_WALL,"Spruce Wood Wall");
         translationBuilder.add(ModBlocks.BIRCH_WOOD_WALL,"Birch Wood Wall");

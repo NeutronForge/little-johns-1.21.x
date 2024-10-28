@@ -4,6 +4,7 @@ import com.echo.little_johns.block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.loottable.BlockLootTableGenerator;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
@@ -130,6 +131,29 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ECO_FRIENDLY_MOSS_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
         addDrop(ModBlocks.ECO_FRIENDLY_PALE_MOSS_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
         addDrop(ModBlocks.ECO_FRIENDLY_GRASS_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createSilkTouchCondition()));
+
+
+
+        addDrop(ModBlocks.OAK_LEAF_HEDGE, block -> this.oakLeavesDrops(block, Blocks.OAK_SAPLING, SAPLING_DROP_CHANCE));
+        addDrop(ModBlocks.SPRUCE_LEAF_HEDGE, block -> this.leavesDrops(block, Blocks.SPRUCE_SAPLING, SAPLING_DROP_CHANCE));
+        addDrop(ModBlocks.BIRCH_LEAF_HEDGE, block -> this.leavesDrops(block, Blocks.BIRCH_SAPLING, SAPLING_DROP_CHANCE));
+        addDrop(ModBlocks.JUNGLE_LEAF_HEDGE, block -> this.leavesDrops(block, Blocks.JUNGLE_SAPLING, SAPLING_DROP_CHANCE));
+        addDrop(ModBlocks.ACACIA_LEAF_HEDGE, block -> this.leavesDrops(block, Blocks.ACACIA_SAPLING, SAPLING_DROP_CHANCE));
+        addDrop(ModBlocks.DARK_OAK_LEAF_HEDGE, block -> this.oakLeavesDrops(block, Blocks.DARK_OAK_SAPLING, SAPLING_DROP_CHANCE));
+        addDrop(ModBlocks.MANGROVE_LEAF_HEDGE, block -> this.mangroveLeavesDrops(block));
+        addDrop(ModBlocks.CHERRY_LEAF_HEDGE, block -> this.leavesDrops(block, Blocks.CHERRY_SAPLING, SAPLING_DROP_CHANCE));
+        addDrop(ModBlocks.PALE_OAK_LEAF_HEDGE, block -> this.oakLeavesDrops(block, Blocks.PALE_OAK_SAPLING, SAPLING_DROP_CHANCE));
+        addDrop(ModBlocks.AZALEA_LEAF_HEDGE, block -> this.leavesDrops(block, Blocks.AZALEA, SAPLING_DROP_CHANCE));
+        addDrop(ModBlocks.FLOWERING_AZALEA_LEAF_HEDGE, block -> this.leavesDrops(block, Blocks.FLOWERING_AZALEA, SAPLING_DROP_CHANCE));
+
+        addDrop(ModBlocks.BAMBOO_LEAF_HEDGE, block -> this.leavesDrops(block, Blocks.BAMBOO, SAPLING_DROP_CHANCE));
+        addDrop(ModBlocks.NETHER_WART_HEDGE);
+        addDrop(ModBlocks.WARPED_WART_HEDGE);
+        addDrop(ModBlocks.MOSS_HEDGE);
+        addDrop(ModBlocks.PALE_MOSS_HEDGE);
+
+
+        addDrop(ModBlocks.BAMBOO_LEAVES, block -> this.leavesDrops(block, Blocks.BAMBOO, SAPLING_DROP_CHANCE));
 
 
 

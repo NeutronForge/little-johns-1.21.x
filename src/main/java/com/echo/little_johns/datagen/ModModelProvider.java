@@ -161,6 +161,73 @@ public class ModModelProvider extends FabricModelProvider {
 
 
 
+        BlockStateModelGenerator.BlockTexturePool oakLeavesPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.OAK_LEAVES);
+        oakLeavesPool.wall(ModBlocks.OAK_LEAF_HEDGE);
+
+
+        BlockStateModelGenerator.BlockTexturePool spruceLeavesPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.SPRUCE_LEAVES);
+        spruceLeavesPool.wall(ModBlocks.SPRUCE_LEAF_HEDGE);
+
+
+        BlockStateModelGenerator.BlockTexturePool birchLeavesPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.BIRCH_LEAVES);
+        birchLeavesPool.wall(ModBlocks.BIRCH_LEAF_HEDGE);
+
+
+        BlockStateModelGenerator.BlockTexturePool jungleLeavesPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.JUNGLE_LEAVES);
+        jungleLeavesPool.wall(ModBlocks.JUNGLE_LEAF_HEDGE);
+
+
+        BlockStateModelGenerator.BlockTexturePool acaciaLeavesPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.ACACIA_LEAVES);
+        acaciaLeavesPool.wall(ModBlocks.ACACIA_LEAF_HEDGE);
+
+
+        BlockStateModelGenerator.BlockTexturePool darkOakLeavesPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.DARK_OAK_LEAVES);
+        darkOakLeavesPool.wall(ModBlocks.DARK_OAK_LEAF_HEDGE);
+
+
+        BlockStateModelGenerator.BlockTexturePool mangroveLeavesPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.MANGROVE_LEAVES);
+        mangroveLeavesPool.wall(ModBlocks.MANGROVE_LEAF_HEDGE);
+
+
+        BlockStateModelGenerator.BlockTexturePool cherryLeavesPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.CHERRY_LEAVES);
+        cherryLeavesPool.wall(ModBlocks.CHERRY_LEAF_HEDGE);
+
+
+        BlockStateModelGenerator.BlockTexturePool paleOakLeavesPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.PALE_OAK_LEAVES);
+        paleOakLeavesPool.wall(ModBlocks.PALE_OAK_LEAF_HEDGE);
+
+
+        BlockStateModelGenerator.BlockTexturePool azaleaLeavesPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.AZALEA_LEAVES);
+        azaleaLeavesPool.wall(ModBlocks.AZALEA_LEAF_HEDGE);
+
+
+        BlockStateModelGenerator.BlockTexturePool floweringAzaleaLeavesPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.FLOWERING_AZALEA_LEAVES);
+        floweringAzaleaLeavesPool.wall(ModBlocks.FLOWERING_AZALEA_LEAF_HEDGE);
+
+
+        BlockStateModelGenerator.BlockTexturePool bambooLeavesPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BAMBOO_LEAVES);
+        bambooLeavesPool.wall(ModBlocks.BAMBOO_LEAF_HEDGE);
+
+
+        BlockStateModelGenerator.BlockTexturePool netherWartPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.NETHER_WART_BLOCK);
+        netherWartPool.wall(ModBlocks.NETHER_WART_HEDGE);
+
+
+        BlockStateModelGenerator.BlockTexturePool warpedWartPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.WARPED_WART_BLOCK);
+        warpedWartPool.wall(ModBlocks.WARPED_WART_HEDGE);
+
+
+        BlockStateModelGenerator.BlockTexturePool mossPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.MOSS_BLOCK);
+        mossPool.wall(ModBlocks.MOSS_HEDGE);
+
+
+        BlockStateModelGenerator.BlockTexturePool paleMossPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.PALE_MOSS_BLOCK);
+        paleMossPool.wall(ModBlocks.PALE_MOSS_HEDGE);
+
+
+
+
+
 
     }
 
