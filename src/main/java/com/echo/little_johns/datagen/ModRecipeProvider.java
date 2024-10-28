@@ -98,7 +98,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("N ")
                         .criterion("has_iron_ingot", this.conditionsFromItem(Items.IRON_INGOT)).offerTo(exporter);
 
-                ShapedRecipeJsonBuilder.create(itemLookup, RecipeCategory.TOOLS, ModItems.MORSMORDRE_CRAZY_DONKEY_MUSIC_DISC, 1)
+                ShapedRecipeJsonBuilder.create(itemLookup, RecipeCategory.TOOLS, ModItems.MUSIC_DISC_MORSMORDRE, 1)
                         .input('B', ModItems.BORROWED_SCREWS)
                         .input('G', ModBlocks.GALVANIZED_SQUARE_STEEL)
                         .pattern("GGG")
@@ -107,17 +107,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion("has_iron_ingot", this.conditionsFromItem(Items.IRON_INGOT)).offerTo(exporter);
 
 
-                offerTableSawBlockRecipe(RecipeCategory.MISC, ModBlocks.OAK_TABLE_SAW, 1, Blocks.OAK_LOG, Blocks.OAK_PLANKS, Items.IRON_INGOT, "has_oak_log", "has_iron_ingot", exporter);
-                offerTableSawBlockRecipe(RecipeCategory.MISC, ModBlocks.SPRUCE_TABLE_SAW, 1, Blocks.SPRUCE_LOG, Blocks.SPRUCE_PLANKS, Items.IRON_INGOT, "has_spruce_log", "has_iron_ingot", exporter);
-                offerTableSawBlockRecipe(RecipeCategory.MISC, ModBlocks.BIRCH_TABLE_SAW, 1, Blocks.BIRCH_LOG, Blocks.BIRCH_PLANKS, Items.IRON_INGOT, "has_birch_log", "has_iron_ingot", exporter);
-                offerTableSawBlockRecipe(RecipeCategory.MISC, ModBlocks.JUNGLE_TABLE_SAW, 1, Blocks.JUNGLE_LOG, Blocks.JUNGLE_PLANKS, Items.IRON_INGOT, "has_jungle_log", "has_iron_ingot", exporter);
-                offerTableSawBlockRecipe(RecipeCategory.MISC, ModBlocks.ACACIA_TABLE_SAW, 1, Blocks.ACACIA_LOG, Blocks.ACACIA_PLANKS, Items.IRON_INGOT, "has_acacia_log", "has_iron_ingot", exporter);
-                offerTableSawBlockRecipe(RecipeCategory.MISC, ModBlocks.DARK_OAK_TABLE_SAW, 1, Blocks.DARK_OAK_LOG, Blocks.DARK_OAK_PLANKS, Items.IRON_INGOT, "has_dark_oak_log", "has_iron_ingot", exporter);
-                offerTableSawBlockRecipe(RecipeCategory.MISC, ModBlocks.MANGROVE_TABLE_SAW, 1, Blocks.MANGROVE_LOG, Blocks.MANGROVE_PLANKS, Items.IRON_INGOT, "has_mangrove_log", "has_iron_ingot", exporter);
-                offerTableSawBlockRecipe(RecipeCategory.MISC, ModBlocks.CHERRY_TABLE_SAW, 1, Blocks.CHERRY_LOG, Blocks.CHERRY_PLANKS, Items.IRON_INGOT, "has_cherry_log", "has_iron_ingot", exporter);
-                offerTableSawBlockRecipe(RecipeCategory.MISC, ModBlocks.BAMBOO_TABLE_SAW, 1, Blocks.BAMBOO_BLOCK, Blocks.BAMBOO_PLANKS, Items.IRON_INGOT, "has_bamboo_block", "has_iron_ingot", exporter);
-                offerTableSawBlockRecipe(RecipeCategory.MISC, ModBlocks.CRIMSON_TABLE_SAW, 1, Blocks.CRIMSON_STEM, Blocks.CRIMSON_PLANKS, Items.GOLD_INGOT, "has_crimson_stem", "has_iron_ingot", exporter);
-                offerTableSawBlockRecipe(RecipeCategory.MISC, ModBlocks.WARPED_TABLE_SAW, 1, Blocks.WARPED_STEM, Blocks.WARPED_PLANKS, Items.GOLD_INGOT, "has_warped_stem", "has_iron_ingot", exporter);
+                offerTableSawBlockRecipe(RecipeCategory.MISC, ModBlocks.OAK_TABLE_SAW, 1, Items.STICK, Blocks.OAK_SLAB, Items.IRON_INGOT, "has_oak_slab", "has_iron_ingot", exporter);
+                offerTableSawBlockRecipe(RecipeCategory.MISC, ModBlocks.SPRUCE_TABLE_SAW, 1, Items.STICK, Blocks.SPRUCE_SLAB, Items.IRON_INGOT, "has_spruce_slab", "has_iron_ingot", exporter);
+                offerTableSawBlockRecipe(RecipeCategory.MISC, ModBlocks.BIRCH_TABLE_SAW, 1, Items.STICK, Blocks.BIRCH_SLAB, Items.IRON_INGOT, "has_birch_slab", "has_iron_ingot", exporter);
+                offerTableSawBlockRecipe(RecipeCategory.MISC, ModBlocks.JUNGLE_TABLE_SAW, 1, Items.STICK, Blocks.JUNGLE_SLAB, Items.IRON_INGOT, "has_jungle_slab", "has_iron_ingot", exporter);
+                offerTableSawBlockRecipe(RecipeCategory.MISC, ModBlocks.ACACIA_TABLE_SAW, 1, Items.STICK, Blocks.ACACIA_SLAB, Items.IRON_INGOT, "has_acacia_slab", "has_iron_ingot", exporter);
+                offerTableSawBlockRecipe(RecipeCategory.MISC, ModBlocks.DARK_OAK_TABLE_SAW, 1, Items.STICK, Blocks.DARK_OAK_SLAB, Items.IRON_INGOT, "has_dark_oak_slab", "has_iron_ingot", exporter);
+                offerTableSawBlockRecipe(RecipeCategory.MISC, ModBlocks.MANGROVE_TABLE_SAW, 1, Items.STICK, Blocks.MANGROVE_SLAB, Items.IRON_INGOT, "has_mangrove_slab", "has_iron_ingot", exporter);
+                offerTableSawBlockRecipe(RecipeCategory.MISC, ModBlocks.CHERRY_TABLE_SAW, 1, Items.STICK, Blocks.CHERRY_SLAB, Items.IRON_INGOT, "has_cherry_slab", "has_iron_ingot", exporter);
+                offerTableSawBlockRecipe(RecipeCategory.MISC, ModBlocks.PALE_OAK_TABLE_SAW, 1, Items.STICK, Blocks.PALE_OAK_SLAB, Items.IRON_INGOT, "has_pale_oak_slab", "has_iron_ingot", exporter);
+                offerTableSawBlockRecipe(RecipeCategory.MISC, ModBlocks.BAMBOO_TABLE_SAW, 1, Items.STICK, Blocks.BAMBOO_SLAB, Items.IRON_INGOT, "has_bamboo_slab", "has_iron_ingot", exporter);
+                offerTableSawBlockRecipe(RecipeCategory.MISC, ModBlocks.CRIMSON_TABLE_SAW, 1, Items.STICK, Blocks.CRIMSON_SLAB, Items.GOLD_INGOT, "has_crimson_slab", "has_iron_ingot", exporter);
+                offerTableSawBlockRecipe(RecipeCategory.MISC, ModBlocks.WARPED_TABLE_SAW, 1, Items.STICK, Blocks.WARPED_SLAB, Items.GOLD_INGOT, "has_warped_slab", "has_iron_ingot", exporter);
 
                 offerCrossRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OAK_WOOD_FRAMEWORK, 8, Block.getBlockFromItem(Items.STRING), Blocks.OAK_LOG, "has_oak_log", exporter);
                 offerCrossRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SPRUCE_WOOD_FRAMEWORK, 8, Block.getBlockFromItem(Items.STRING), Blocks.SPRUCE_LOG, "has_spruce_log", exporter);
@@ -127,6 +128,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerCrossRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARK_OAK_WOOD_FRAMEWORK, 8, Block.getBlockFromItem(Items.STRING), Blocks.DARK_OAK_LOG, "has_dark_oak_log", exporter);
                 offerCrossRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MANGROVE_WOOD_FRAMEWORK, 8, Block.getBlockFromItem(Items.STRING), Blocks.MANGROVE_LOG, "has_mangrove_log", exporter);
                 offerCrossRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHERRY_WOOD_FRAMEWORK, 8, Block.getBlockFromItem(Items.STRING), Blocks.CHERRY_LOG, "has_cherry_log", exporter);
+                offerCrossRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PALE_OAK_WOOD_FRAMEWORK, 8, Block.getBlockFromItem(Items.STRING), Blocks.PALE_OAK_LOG, "has_pale_oak_log", exporter);
                 offerCrossRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BAMBOO_FRAMEWORK, 8, Block.getBlockFromItem(Items.STRING), Blocks.BAMBOO_BLOCK, "has_bamboo_block", exporter);
                 offerCrossRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRIMSON_HYPHAE_FRAMEWORK, 8, Block.getBlockFromItem(Items.STRING), Blocks.CRIMSON_STEM, "has_crimson_stem", exporter);
                 offerCrossRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WARPED_HYPHAE_FRAMEWORK, 8, Block.getBlockFromItem(Items.STRING), Blocks.WARPED_STEM, "has_warped_stem", exporter);
@@ -139,6 +141,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_DARK_OAK_PLANK_VENEERS, 16, Blocks.DARK_OAK_PLANKS, "has_dark_oak_planks", exporter);
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_MANGROVE_PLANK_VENEERS, 16, Blocks.MANGROVE_PLANKS, "has_mangrove_planks", exporter);
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_CHERRY_PLANK_VENEERS, 16, Blocks.CHERRY_PLANKS, "has_cherry_planks", exporter);
+                offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_PALE_OAK_PLANK_VENEERS, 16, Blocks.PALE_OAK_PLANKS, "has_pale_oak_planks", exporter);
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_BAMBOO_PLANK_VENEERS, 16, Blocks.BAMBOO_BLOCK, "has_bamboo_planks", exporter);
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_CRIMSON_PLANK_VENEERS, 16, Blocks.CRIMSON_PLANKS, "has_crimson_planks", exporter);
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_WARPED_PLANK_VENEERS, 16, Blocks.WARPED_PLANKS, "has_warped_planks", exporter);
@@ -151,6 +154,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_DARK_OAK_WOOD_VENEERS, 16, Blocks.DARK_OAK_LOG, "has_dark_oak_log", exporter);
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_MANGROVE_WOOD_VENEERS, 16, Blocks.MANGROVE_LOG, "has_mangrove_log", exporter);
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_CHERRY_WOOD_VENEERS, 16, Blocks.CHERRY_LOG, "has_cherry_log", exporter);
+                offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_PALE_OAK_WOOD_VENEERS, 16, Blocks.PALE_OAK_LOG, "has_pale_oak_log", exporter);
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_BAMBOO_VENEERS, 16, Blocks.BAMBOO_BLOCK, "has_bamboo_block", exporter);
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_CRIMSON_HYPHAE_VENEERS, 16, Blocks.CRIMSON_STEM, "has_crimson_stem", exporter);
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_WARPED_HYPHAE_VENEERS, 16, Blocks.WARPED_STEM, "has_warped_stem", exporter);
@@ -163,6 +167,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_DARK_OAK_LEAF_VENEERS, 16, Blocks.DARK_OAK_LEAVES, "has_dark_oak_leaves", exporter);
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_MANGROVE_LEAF_VENEERS, 16, Blocks.MANGROVE_LEAVES, "has_mangrove_leaves", exporter);
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_CHERRY_LEAF_VENEERS, 16, Blocks.CHERRY_LEAVES, "has_cherry_leaves", exporter);
+                offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_PALE_OAK_LEAF_VENEERS, 16, Blocks.PALE_OAK_LEAVES, "has_pale_oak_leaves", exporter);
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_AZALEA_LEAF_VENEERS, 16, Blocks.AZALEA_LEAVES, "has_azalea_leaves", exporter);
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_FLOWERING_AZALEA_LEAF_VENEERS, 16, Blocks.FLOWERING_AZALEA_LEAVES, "has_flowering_azalea_leaves", exporter);
                 ShapedRecipeJsonBuilder.create(itemLookup, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_BAMBOO_LEAF_VENEERS, 16)
@@ -176,6 +181,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_NETHER_WART_VENEERS, 16, Blocks.NETHER_WART_BLOCK, "has_nether_wart_block", exporter);
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_WARPED_WART_VENEERS, 16, Blocks.WARPED_WART_BLOCK, "has_warped_wart_block", exporter);
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_MOSS_VENEERS, 16, Blocks.MOSS_BLOCK, "has_moss_block", exporter);
+                offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_PALE_MOSS_VENEERS, 16, Blocks.PALE_MOSS_BLOCK, "has_pale_moss_block", exporter);
                 offerEcoFriendlyWoodVeneersRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECO_FRIENDLY_GRASS_VENEERS, 16, Blocks.GRASS_BLOCK, "has_moss_block", exporter);
 
 
@@ -187,6 +193,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARK_OAK_PLANK_WALL, Blocks.DARK_OAK_PLANKS, exporter);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MANGROVE_PLANK_WALL, Blocks.MANGROVE_PLANKS, exporter);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHERRY_PLANK_WALL, Blocks.CHERRY_PLANKS, exporter);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PALE_OAK_PLANK_WALL, Blocks.PALE_OAK_PLANKS, exporter);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BAMBOO_PLANK_WALL, Blocks.BAMBOO_PLANKS, exporter);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRIMSON_PLANK_WALL, Blocks.CRIMSON_PLANKS, exporter);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WARPED_PLANK_WALL, Blocks.WARPED_PLANKS, exporter);
@@ -199,6 +206,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARK_OAK_WOOD_WALL, Blocks.DARK_OAK_LOG, exporter);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MANGROVE_WOOD_WALL, Blocks.MANGROVE_LOG, exporter);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHERRY_WOOD_WALL, Blocks.CHERRY_LOG, exporter);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PALE_OAK_WOOD_WALL, Blocks.PALE_OAK_LOG, exporter);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BAMBOO_STEM_WALL, Blocks.BAMBOO_BLOCK, exporter);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRIMSON_HYPHAE_WALL, Blocks.CRIMSON_STEM, exporter);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WARPED_HYPHAE_WALL, Blocks.WARPED_STEM, exporter);
@@ -212,6 +220,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerFenceRecipe(Blocks.DARK_OAK_LOG, ModBlocks.DARK_OAK_WOOD_FENCE, "has_dark_oak_log", exporter);
                 offerFenceRecipe(Blocks.MANGROVE_LOG, ModBlocks.MANGROVE_WOOD_FENCE, "has_mangrove_log", exporter);
                 offerFenceRecipe(Blocks.CHERRY_LOG, ModBlocks.CHERRY_WOOD_FENCE, "has_cherry_log", exporter);
+                offerFenceRecipe(Blocks.PALE_OAK_LOG, ModBlocks.PALE_OAK_WOOD_FENCE, "has_pale_oak_log", exporter);
                 offerFenceRecipe(Blocks.BAMBOO_BLOCK, ModBlocks.BAMBOO_STEM_FENCE, "has_bamboo_block", exporter);
                 offerFenceRecipe(Blocks.CRIMSON_STEM, ModBlocks.CRIMSON_HYPHAE_FENCE, "has_crimson_stem", exporter);
                 offerFenceRecipe(Blocks.WARPED_STEM, ModBlocks.WARPED_HYPHAE_FENCE, "has_warped_stem", exporter);
@@ -224,6 +233,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerFenceGateRecipe(Blocks.DARK_OAK_LOG, ModBlocks.DARK_OAK_WOOD_FENCE_GATE, "has_dark_oak_log", exporter);
                 offerFenceGateRecipe(Blocks.MANGROVE_LOG, ModBlocks.MANGROVE_WOOD_FENCE_GATE, "has_mangrove_log", exporter);
                 offerFenceGateRecipe(Blocks.CHERRY_LOG, ModBlocks.CHERRY_WOOD_FENCE_GATE, "has_cherry_log", exporter);
+                offerFenceGateRecipe(Blocks.PALE_OAK_LOG, ModBlocks.PALE_OAK_WOOD_FENCE_GATE, "has_pale_oak_log", exporter);
                 offerFenceGateRecipe(Blocks.BAMBOO_BLOCK, ModBlocks.BAMBOO_STEM_FENCE_GATE, "has_bamboo_block", exporter);
                 offerFenceGateRecipe(Blocks.CRIMSON_STEM, ModBlocks.CRIMSON_HYPHAE_FENCE_GATE, "has_crimson_stem", exporter);
                 offerFenceGateRecipe(Blocks.WARPED_STEM, ModBlocks.WARPED_HYPHAE_FENCE_GATE, "has_warped_stem", exporter);
@@ -236,6 +246,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerStairsRecipe(Blocks.DARK_OAK_LOG, ModBlocks.DARK_OAK_WOOD_STAIRS, "has_dark_oak_log", exporter);
                 offerStairsRecipe(Blocks.MANGROVE_LOG, ModBlocks.MANGROVE_WOOD_STAIRS, "has_mangrove_log", exporter);
                 offerStairsRecipe(Blocks.CHERRY_LOG, ModBlocks.CHERRY_WOOD_STAIRS, "has_cherry_log", exporter);
+                offerStairsRecipe(Blocks.PALE_OAK_LOG, ModBlocks.PALE_OAK_WOOD_STAIRS, "has_pale_oak_log", exporter);
                 offerStairsRecipe(Blocks.BAMBOO_BLOCK, ModBlocks.BAMBOO_STEM_STAIRS, "has_bamboo_block", exporter);
                 offerStairsRecipe(Blocks.CRIMSON_STEM, ModBlocks.CRIMSON_HYPHAE_STAIRS, "has_crimson_stem", exporter);
                 offerStairsRecipe(Blocks.WARPED_STEM, ModBlocks.WARPED_HYPHAE_STAIRS, "has_warped_stem", exporter);
@@ -248,6 +259,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerSlabRecipe(Blocks.DARK_OAK_LOG, ModBlocks.DARK_OAK_WOOD_SLAB, "has_dark_oak_log", exporter);
                 offerSlabRecipe(Blocks.MANGROVE_LOG, ModBlocks.MANGROVE_WOOD_SLAB, "has_mangrove_log", exporter);
                 offerSlabRecipe(Blocks.CHERRY_LOG, ModBlocks.CHERRY_WOOD_SLAB, "has_cherry_log", exporter);
+                offerSlabRecipe(Blocks.PALE_OAK_LOG, ModBlocks.PALE_OAK_WOOD_SLAB, "has_pale_oak_log", exporter);
                 offerSlabRecipe(Blocks.BAMBOO_BLOCK, ModBlocks.BAMBOO_STEM_SLAB, "has_bamboo_block", exporter);
                 offerSlabRecipe(Blocks.CRIMSON_STEM, ModBlocks.CRIMSON_HYPHAE_SLAB, "has_crimson_stem", exporter);
                 offerSlabRecipe(Blocks.WARPED_STEM, ModBlocks.WARPED_HYPHAE_SLAB, "has_warped_stem", exporter);
@@ -396,6 +408,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         Blocks.CHERRY_FENCE_GATE,
                         Blocks.CHERRY_DOOR,
                         Blocks.CHERRY_TRAPDOOR);
+
+                offerCuttingGroupRecipe(exporter, Blocks.PALE_OAK_LOG, Blocks.PALE_OAK_PLANKS,
+                        ModBlocks.ECO_FRIENDLY_PALE_OAK_WOOD_VENEERS,
+                        ModBlocks.PALE_OAK_WOOD_FRAMEWORK,
+                        ModBlocks.PALE_OAK_WOOD_STAIRS,
+                        ModBlocks.PALE_OAK_WOOD_SLAB,
+                        ModBlocks.PALE_OAK_WOOD_WALL,
+                        ModBlocks.PALE_OAK_WOOD_FENCE,
+                        ModBlocks.PALE_OAK_WOOD_FENCE_GATE,
+                        Blocks.PALE_OAK_PLANKS,
+                        ModBlocks.ECO_FRIENDLY_PALE_OAK_PLANK_VENEERS,
+                        Blocks.PALE_OAK_STAIRS,
+                        Blocks.PALE_OAK_SLAB,
+                        ModBlocks.PALE_OAK_PLANK_WALL,
+                        Blocks.PALE_OAK_FENCE,
+                        Blocks.PALE_OAK_FENCE_GATE,
+                        Blocks.PALE_OAK_DOOR,
+                        Blocks.PALE_OAK_TRAPDOOR);
 
                 offerCuttingGroupRecipe(exporter, Blocks.BAMBOO_BLOCK, Blocks.BAMBOO_PLANKS,
                         ModBlocks.ECO_FRIENDLY_BAMBOO_VENEERS,
@@ -611,16 +641,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(criterion, this.conditionsFromItem(inputX)).offerTo(exporter);
             }
 
-            private void offerTableSawBlockRecipe(RecipeCategory category, Block output, int count, Block inputLog, Block inputPlanks, Item inputSaw, String criterion1, String criterion2, RecipeExporter exporter) {
+            private void offerTableSawBlockRecipe(RecipeCategory category, Block output, int count, Item inputStick, Block inputSlab, Item inputSaw, String criterion1, String criterion2, RecipeExporter exporter) {
 
                 ShapedRecipeJsonBuilder.create(itemLookup, category, output, count)
-                        .input('#', inputLog)
-                        .input('*', inputPlanks)
+                        .input('#', inputStick)
+                        .input('*', inputSlab)
                         .input('@', inputSaw)
                         .pattern("*@*")
                         .pattern("# #")
                         .pattern("# #")
-                        .criterion(criterion1, this.conditionsFromItem(inputLog))
+                        .criterion(criterion1, this.conditionsFromItem(inputStick))
                         .criterion(criterion2, this.conditionsFromItem(inputSaw)).offerTo(exporter);
             }
 

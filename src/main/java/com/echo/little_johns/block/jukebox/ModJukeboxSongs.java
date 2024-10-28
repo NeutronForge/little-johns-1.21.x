@@ -6,15 +6,12 @@ import net.minecraft.block.jukebox.JukeboxSongs;
 import net.minecraft.registry.*;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
 
 public interface ModJukeboxSongs extends JukeboxSongs {
-    RegistryKey<JukeboxSong> MORSMORDRE_CRAZY_DONKEY = of("morsmordre_crazy_donkey");
-
-
+    RegistryKey<JukeboxSong> MORSMORDRE = of("morsmordre");
 
 
     private static RegistryKey<JukeboxSong> of(String id) {
@@ -22,8 +19,7 @@ public interface ModJukeboxSongs extends JukeboxSongs {
     }
 
     private static void register(
-            Registerable<JukeboxSong> registry, RegistryKey<JukeboxSong> key, RegistryEntry.Reference<SoundEvent> soundEvent, int lengthInSeconds, int comparatorOutput
-    ) {
+            Registerable<JukeboxSong> registry, RegistryKey<JukeboxSong> key, RegistryEntry.Reference<SoundEvent> soundEvent, int lengthInSeconds, int comparatorOutput) {
         registry.register(
                 key, new JukeboxSong(soundEvent, Text.translatable(Util.createTranslationKey("jukebox_song", key.getValue())), (float)lengthInSeconds, comparatorOutput)
         );
@@ -33,7 +29,7 @@ public interface ModJukeboxSongs extends JukeboxSongs {
 
 
     static void bootstrap(Registerable<JukeboxSong> registry) {
-        register(registry, MORSMORDRE_CRAZY_DONKEY, ModSoundEvents.MORSMORDRE_CRAZY_DONKEY, 218, 15);
+        register(registry, MORSMORDRE, ModSoundEvents.MORSMORDRE, 218, 15);
     }
 
 

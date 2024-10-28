@@ -47,6 +47,9 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool cherryPlanksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.CHERRY_PLANKS);
         cherryPlanksPool.wall(ModBlocks.CHERRY_PLANK_WALL);
 
+        BlockStateModelGenerator.BlockTexturePool paleOakPlanksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.PALE_OAK_PLANKS);
+        paleOakPlanksPool.wall(ModBlocks.PALE_OAK_PLANK_WALL);
+
         BlockStateModelGenerator.BlockTexturePool bambooPlanksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.BAMBOO_PLANKS);
         bambooPlanksPool.wall(ModBlocks.BAMBOO_PLANK_WALL);
 
@@ -122,6 +125,14 @@ public class ModModelProvider extends FabricModelProvider {
         cherryWoodPool.fenceGate(ModBlocks.CHERRY_WOOD_FENCE_GATE);
         cherryWoodPool.slab(ModBlocks.CHERRY_WOOD_SLAB);
         cherryWoodPool.stairs(ModBlocks.CHERRY_WOOD_STAIRS);
+
+
+        BlockStateModelGenerator.BlockTexturePool paleOakWoodPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.PALE_OAK_LOG);
+        paleOakWoodPool.wall(ModBlocks.PALE_OAK_WOOD_WALL);
+        paleOakWoodPool.fence(ModBlocks.PALE_OAK_WOOD_FENCE);
+        paleOakWoodPool.fenceGate(ModBlocks.PALE_OAK_WOOD_FENCE_GATE);
+        paleOakWoodPool.slab(ModBlocks.PALE_OAK_WOOD_SLAB);
+        paleOakWoodPool.stairs(ModBlocks.PALE_OAK_WOOD_STAIRS);
         
         
         BlockStateModelGenerator.BlockTexturePool bambooPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.BAMBOO_BLOCK);
@@ -160,7 +171,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.BORROWED_SCREWS, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.MORSMORDRE_CRAZY_DONKEY_MUSIC_DISC, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MUSIC_DISC_MORSMORDRE, Models.TEMPLATE_MUSIC_DISC);
 
 
     }

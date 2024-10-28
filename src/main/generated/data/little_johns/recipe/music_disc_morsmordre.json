@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": "little_johns:borrowed_screws",
+    "G": "little_johns:galvanized_square_steel"
+  },
+  "pattern": [
+    "GGG",
+    "GBG",
+    "GGG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "little_johns:music_disc_morsmordre"
+  }
+}

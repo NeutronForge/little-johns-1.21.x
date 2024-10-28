@@ -1,8 +1,8 @@
 {
-  "morsmordre_crazy_donkey": {
+  "music_disc.morsmordre": {
     "sounds": [
       {
-        "name": "little_johns:morsmordre_crazy_donkey",
+        "name": "little_johns:music_disc.morsmordre",
         "stream": true
       }
     ]

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:stick",
+    "*": "minecraft:pale_oak_slab",
+    "@": "minecraft:iron_ingot"
+  },
+  "pattern": [
+    "*@*",
+    "# #",
+    "# #"
+  ],
+  "result": {
+    "count": 1,
+    "id": "little_johns:pale_oak_table_saw"
+  }
+}

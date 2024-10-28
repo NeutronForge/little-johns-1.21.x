@@ -132,6 +132,7 @@ public class TableSawScreenHandler
                 || TableSawScreenHandler.canUse(this.context, player, ModBlocks.DARK_OAK_TABLE_SAW)
                 || TableSawScreenHandler.canUse(this.context, player, ModBlocks.MANGROVE_TABLE_SAW)
                 || TableSawScreenHandler.canUse(this.context, player, ModBlocks.CHERRY_TABLE_SAW)
+                || TableSawScreenHandler.canUse(this.context, player, ModBlocks.PALE_OAK_TABLE_SAW)
                 || TableSawScreenHandler.canUse(this.context, player, ModBlocks.BAMBOO_TABLE_SAW)
                 || TableSawScreenHandler.canUse(this.context, player, ModBlocks.CRIMSON_TABLE_SAW)
                 || TableSawScreenHandler.canUse(this.context, player, ModBlocks.WARPED_TABLE_SAW);

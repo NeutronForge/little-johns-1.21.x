@@ -27,6 +27,7 @@ public class ModBlocks {
     public static final Block DARK_OAK_TABLE_SAW = registerBlockWithItem("dark_oak_table_saw", TableSawBlock::new, AbstractBlock.Settings.copy(Blocks.DARK_OAK_WOOD).nonOpaque()).getLeft();
     public static final Block MANGROVE_TABLE_SAW = registerBlockWithItem("mangrove_table_saw", TableSawBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_WOOD).nonOpaque()).getLeft();
     public static final Block CHERRY_TABLE_SAW = registerBlockWithItem("cherry_table_saw", TableSawBlock::new, AbstractBlock.Settings.copy(Blocks.CHERRY_WOOD).nonOpaque()).getLeft();
+    public static final Block PALE_OAK_TABLE_SAW = registerBlockWithItem("pale_oak_table_saw", TableSawBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_WOOD).nonOpaque()).getLeft();
     public static final Block BAMBOO_TABLE_SAW = registerBlockWithItem("bamboo_table_saw", TableSawBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque()).getLeft();
     public static final Block CRIMSON_TABLE_SAW = registerBlockWithItem("crimson_table_saw", TableSawBlock::new, AbstractBlock.Settings.copy(Blocks.CRIMSON_HYPHAE).nonOpaque()).getLeft();
     public static final Block WARPED_TABLE_SAW = registerBlockWithItem("warped_table_saw", TableSawBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_HYPHAE).nonOpaque()).getLeft();
@@ -53,6 +54,7 @@ public class ModBlocks {
     public static final Block DARK_OAK_WOOD_FRAMEWORK = registerBlockWithItem("dark_oak_wood_framework", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.DARK_OAK_WOOD).nonOpaque()).getLeft();
     public static final Block MANGROVE_WOOD_FRAMEWORK = registerBlockWithItem("mangrove_wood_framework", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_WOOD).nonOpaque()).getLeft();
     public static final Block CHERRY_WOOD_FRAMEWORK = registerBlockWithItem("cherry_wood_framework", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.CHERRY_WOOD).nonOpaque()).getLeft();
+    public static final Block PALE_OAK_WOOD_FRAMEWORK = registerBlockWithItem("pale_oak_wood_framework", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_WOOD).nonOpaque()).getLeft();
     public static final Block BAMBOO_FRAMEWORK = registerBlockWithItem("bamboo_framework", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque()).getLeft();
     public static final Block CRIMSON_HYPHAE_FRAMEWORK = registerBlockWithItem("crimson_hyphae_framework", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.CRIMSON_HYPHAE).nonOpaque()).getLeft();
     public static final Block WARPED_HYPHAE_FRAMEWORK = registerBlockWithItem("warped_hyphae_framework", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_HYPHAE).nonOpaque()).getLeft();
@@ -67,6 +69,7 @@ public class ModBlocks {
     public static final Block ECO_FRIENDLY_DARK_OAK_PLANK_VENEERS = registerBlockWithItem("eco_friendly_dark_oak_plank_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.DARK_OAK_PLANKS).nonOpaque()).getLeft();
     public static final Block ECO_FRIENDLY_MANGROVE_PLANK_VENEERS = registerBlockWithItem("eco_friendly_mangrove_plank_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS).nonOpaque()).getLeft();
     public static final Block ECO_FRIENDLY_CHERRY_PLANK_VENEERS = registerBlockWithItem("eco_friendly_cherry_plank_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).nonOpaque()).getLeft();
+    public static final Block ECO_FRIENDLY_PALE_OAK_PLANK_VENEERS = registerBlockWithItem("eco_friendly_pale_oak_plank_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_PLANKS).nonOpaque()).getLeft();
     public static final Block ECO_FRIENDLY_BAMBOO_PLANK_VENEERS = registerBlockWithItem("eco_friendly_bamboo_plank_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque()).getLeft();
     public static final Block ECO_FRIENDLY_CRIMSON_PLANK_VENEERS = registerBlockWithItem("eco_friendly_crimson_plank_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque()).getLeft();
     public static final Block ECO_FRIENDLY_WARPED_PLANK_VENEERS = registerBlockWithItem("eco_friendly_warped_plank_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque()).getLeft();
@@ -81,6 +84,7 @@ public class ModBlocks {
     public static final Block ECO_FRIENDLY_DARK_OAK_WOOD_VENEERS = registerBlockWithItem("eco_friendly_dark_oak_wood_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.DARK_OAK_WOOD).nonOpaque()).getLeft();
     public static final Block ECO_FRIENDLY_MANGROVE_WOOD_VENEERS = registerBlockWithItem("eco_friendly_mangrove_wood_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_WOOD).nonOpaque()).getLeft();
     public static final Block ECO_FRIENDLY_CHERRY_WOOD_VENEERS = registerBlockWithItem("eco_friendly_cherry_wood_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.CHERRY_WOOD).nonOpaque()).getLeft();
+    public static final Block ECO_FRIENDLY_PALE_OAK_WOOD_VENEERS = registerBlockWithItem("eco_friendly_pale_oak_wood_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_WOOD).nonOpaque()).getLeft();
     public static final Block ECO_FRIENDLY_BAMBOO_VENEERS = registerBlockWithItem("eco_friendly_bamboo_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque()).getLeft();
     public static final Block ECO_FRIENDLY_CRIMSON_HYPHAE_VENEERS = registerBlockWithItem("eco_friendly_crimson_hyphae_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.CRIMSON_HYPHAE).nonOpaque()).getLeft();
     public static final Block ECO_FRIENDLY_WARPED_HYPHAE_VENEERS = registerBlockWithItem("eco_friendly_warped_hyphae_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_HYPHAE).nonOpaque()).getLeft();
@@ -95,6 +99,7 @@ public class ModBlocks {
     public static final Block ECO_FRIENDLY_DARK_OAK_LEAF_VENEERS = registerBlockWithItem("eco_friendly_dark_oak_leaf_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.DARK_OAK_LEAVES).nonOpaque()).getLeft();
     public static final Block ECO_FRIENDLY_MANGROVE_LEAF_VENEERS = registerBlockWithItem("eco_friendly_mangrove_leaf_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_LEAVES).nonOpaque()).getLeft();
     public static final Block ECO_FRIENDLY_CHERRY_LEAF_VENEERS = registerBlockWithItem("eco_friendly_cherry_leaf_veneers", EcoFriendlyCherryLeafVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.CHERRY_LEAVES).nonOpaque()).getLeft();
+    public static final Block ECO_FRIENDLY_PALE_OAK_LEAF_VENEERS = registerBlockWithItem("eco_friendly_pale_oak_leaf_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_LEAVES).nonOpaque()).getLeft();
     public static final Block ECO_FRIENDLY_AZALEA_LEAF_VENEERS = registerBlockWithItem("eco_friendly_azalea_leaf_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.AZALEA_LEAVES).nonOpaque()).getLeft();
     public static final Block ECO_FRIENDLY_FLOWERING_AZALEA_LEAF_VENEERS = registerBlockWithItem("eco_friendly_flowering_azalea_leaf_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.FLOWERING_AZALEA_LEAVES).nonOpaque()).getLeft();
     public static final Block ECO_FRIENDLY_BAMBOO_LEAF_VENEERS = registerBlockWithItem("eco_friendly_bamboo_leaf_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.JUNGLE_LEAVES).nonOpaque()).getLeft();
@@ -104,6 +109,7 @@ public class ModBlocks {
 
     // OTHER VENEERS
     public static final Block ECO_FRIENDLY_MOSS_VENEERS = registerBlockWithItem("eco_friendly_moss_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.MOSS_BLOCK).nonOpaque()).getLeft();
+    public static final Block ECO_FRIENDLY_PALE_MOSS_VENEERS = registerBlockWithItem("eco_friendly_pale_moss_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_MOSS_BLOCK).nonOpaque()).getLeft();
     public static final Block ECO_FRIENDLY_GRASS_VENEERS = registerBlockWithItem("eco_friendly_grass_veneers", EcoFriendlyWoodVeneersBlock::new, AbstractBlock.Settings.copy(Blocks.GRASS_BLOCK).nonOpaque()).getLeft();
 
 
@@ -116,6 +122,7 @@ public class ModBlocks {
     public static final Block DARK_OAK_WOOD_FENCE = registerBlockWithItem("dark_oak_wood_fence", FenceBlock::new, AbstractBlock.Settings.copy(Blocks.DARK_OAK_WOOD)).getLeft();
     public static final Block MANGROVE_WOOD_FENCE = registerBlockWithItem("mangrove_wood_fence", FenceBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_WOOD)).getLeft();
     public static final Block CHERRY_WOOD_FENCE = registerBlockWithItem("cherry_wood_fence", FenceBlock::new, AbstractBlock.Settings.copy(Blocks.CHERRY_WOOD)).getLeft();
+    public static final Block PALE_OAK_WOOD_FENCE = registerBlockWithItem("pale_oak_wood_fence", FenceBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_WOOD)).getLeft();
     public static final Block BAMBOO_STEM_FENCE = registerBlockWithItem("bamboo_stem_fence", FenceBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS)).getLeft();
     public static final Block CRIMSON_HYPHAE_FENCE = registerBlockWithItem("crimson_hyphae_fence", FenceBlock::new, AbstractBlock.Settings.copy(Blocks.CRIMSON_HYPHAE)).getLeft();
     public static final Block WARPED_HYPHAE_FENCE = registerBlockWithItem("warped_hyphae_fence", FenceBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_HYPHAE)).getLeft();
@@ -129,6 +136,7 @@ public class ModBlocks {
     public static final Block DARK_OAK_WOOD_FENCE_GATE = registerBlockWithItem("dark_oak_wood_fence_gate", (settings) -> new FenceGateBlock(WoodType.DARK_OAK, settings), AbstractBlock.Settings.copy(Blocks.DARK_OAK_WOOD)).getLeft();
     public static final Block MANGROVE_WOOD_FENCE_GATE = registerBlockWithItem("mangrove_wood_fence_gate", (settings) -> new FenceGateBlock(WoodType.MANGROVE, settings), AbstractBlock.Settings.copy(Blocks.MANGROVE_WOOD)).getLeft();
     public static final Block CHERRY_WOOD_FENCE_GATE = registerBlockWithItem("cherry_wood_fence_gate", (settings) -> new FenceGateBlock(WoodType.CHERRY, settings), AbstractBlock.Settings.copy(Blocks.CHERRY_WOOD)).getLeft();
+    public static final Block PALE_OAK_WOOD_FENCE_GATE = registerBlockWithItem("pale_oak_wood_fence_gate", (settings) -> new FenceGateBlock(WoodType.PALE_OAK, settings), AbstractBlock.Settings.copy(Blocks.PALE_OAK_WOOD)).getLeft();
     public static final Block BAMBOO_STEM_FENCE_GATE = registerBlockWithItem("bamboo_stem_fence_gate", (settings) -> new FenceGateBlock(WoodType.BAMBOO, settings), AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS)).getLeft();
     public static final Block CRIMSON_HYPHAE_FENCE_GATE = registerBlockWithItem("crimson_hyphae_fence_gate", (settings) -> new FenceGateBlock(WoodType.CRIMSON, settings), AbstractBlock.Settings.copy(Blocks.CRIMSON_HYPHAE)).getLeft();
     public static final Block WARPED_HYPHAE_FENCE_GATE = registerBlockWithItem("warped_hyphae_fence_gate", (settings) -> new FenceGateBlock(WoodType.WARPED, settings), AbstractBlock.Settings.copy(Blocks.WARPED_HYPHAE)).getLeft();
@@ -144,6 +152,7 @@ public class ModBlocks {
     public static final Block DARK_OAK_WOOD_WALL = registerBlockWithItem("dark_oak_wood_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.DARK_OAK_WOOD)).getLeft();
     public static final Block MANGROVE_WOOD_WALL = registerBlockWithItem("mangrove_wood_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_WOOD)).getLeft();
     public static final Block CHERRY_WOOD_WALL = registerBlockWithItem("cherry_wood_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.CHERRY_WOOD)).getLeft();
+    public static final Block PALE_OAK_WOOD_WALL = registerBlockWithItem("pale_oak_wood_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_WOOD)).getLeft();
     public static final Block BAMBOO_STEM_WALL = registerBlockWithItem("bamboo_stem_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS)).getLeft();
     public static final Block CRIMSON_HYPHAE_WALL = registerBlockWithItem("crimson_hyphae_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.CRIMSON_HYPHAE)).getLeft();
     public static final Block WARPED_HYPHAE_WALL = registerBlockWithItem("warped_hyphae_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_HYPHAE)).getLeft();
@@ -157,6 +166,7 @@ public class ModBlocks {
     public static final Block DARK_OAK_PLANK_WALL = registerBlockWithItem("dark_oak_plank_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.DARK_OAK_PLANKS)).getLeft();
     public static final Block MANGROVE_PLANK_WALL = registerBlockWithItem("mangrove_plank_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS)).getLeft();
     public static final Block CHERRY_PLANK_WALL = registerBlockWithItem("cherry_plank_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS)).getLeft();
+    public static final Block PALE_OAK_PLANK_WALL = registerBlockWithItem("pale_oak_plank_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_PLANKS)).getLeft();
     public static final Block BAMBOO_PLANK_WALL = registerBlockWithItem("bamboo_plank_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS)).getLeft();
     public static final Block CRIMSON_PLANK_WALL = registerBlockWithItem("crimson_plank_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS)).getLeft();
     public static final Block WARPED_PLANK_WALL = registerBlockWithItem("warped_plank_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS)).getLeft();
@@ -171,6 +181,7 @@ public class ModBlocks {
     public static final Block DARK_OAK_WOOD_SLAB = registerBlockWithItem("dark_oak_wood_slab", SlabBlock::new, AbstractBlock.Settings.copy(Blocks.DARK_OAK_WOOD)).getLeft();
     public static final Block MANGROVE_WOOD_SLAB = registerBlockWithItem("mangrove_wood_slab", SlabBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_WOOD)).getLeft();
     public static final Block CHERRY_WOOD_SLAB = registerBlockWithItem("cherry_wood_slab", SlabBlock::new, AbstractBlock.Settings.copy(Blocks.CHERRY_WOOD)).getLeft();
+    public static final Block PALE_OAK_WOOD_SLAB = registerBlockWithItem("pale_oak_wood_slab", SlabBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_WOOD)).getLeft();
     public static final Block BAMBOO_STEM_SLAB = registerBlockWithItem("bamboo_wood_slab", SlabBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS)).getLeft();
     public static final Block CRIMSON_HYPHAE_SLAB = registerBlockWithItem("crimson_hyphae_slab", SlabBlock::new, AbstractBlock.Settings.copy(Blocks.CRIMSON_HYPHAE)).getLeft();
     public static final Block WARPED_HYPHAE_SLAB = registerBlockWithItem("warped_hyphae_slab", SlabBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_HYPHAE)).getLeft();
@@ -184,6 +195,7 @@ public class ModBlocks {
     public static final Block DARK_OAK_WOOD_STAIRS = registerBlockWithItem("dark_oak_wood_stairs", (settings) -> new StairsBlock(Blocks.DARK_OAK_WOOD.getDefaultState(), settings), AbstractBlock.Settings.copy(Blocks.DARK_OAK_WOOD)).getLeft();
     public static final Block MANGROVE_WOOD_STAIRS = registerBlockWithItem("mangrove_wood_stairs", (settings) -> new StairsBlock(Blocks.MANGROVE_WOOD.getDefaultState(), settings), AbstractBlock.Settings.copy(Blocks.MANGROVE_WOOD)).getLeft();
     public static final Block CHERRY_WOOD_STAIRS = registerBlockWithItem("cherry_wood_stairs", (settings) -> new StairsBlock(Blocks.CHERRY_WOOD.getDefaultState(), settings), AbstractBlock.Settings.copy(Blocks.CHERRY_WOOD)).getLeft();
+    public static final Block PALE_OAK_WOOD_STAIRS = registerBlockWithItem("pale_oak_wood_stairs", (settings) -> new StairsBlock(Blocks.PALE_OAK_WOOD.getDefaultState(), settings), AbstractBlock.Settings.copy(Blocks.PALE_OAK_WOOD)).getLeft();
     public static final Block BAMBOO_STEM_STAIRS = registerBlockWithItem("bamboo_wood_stairs", (settings) -> new StairsBlock(Blocks.BAMBOO_BLOCK.getDefaultState(), settings), AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS)).getLeft();
     public static final Block CRIMSON_HYPHAE_STAIRS = registerBlockWithItem("crimson_hyphae_stairs", (settings) -> new StairsBlock(Blocks.CRIMSON_HYPHAE.getDefaultState(), settings), AbstractBlock.Settings.copy(Blocks.CRIMSON_HYPHAE)).getLeft();
     public static final Block WARPED_HYPHAE_STAIRS = registerBlockWithItem("warped_hyphae_stairs", (settings) -> new StairsBlock(Blocks.WARPED_HYPHAE.getDefaultState(), settings), AbstractBlock.Settings.copy(Blocks.WARPED_HYPHAE)).getLeft();
@@ -242,7 +254,7 @@ public class ModBlocks {
     public static <T extends Block> Pair<T, BlockItem> registerBlockWithItem(Identifier identifier, Function<AbstractBlock.Settings, T> factory, AbstractBlock.Settings settings) {
         T block = registerBlock(identifier, factory, settings);
 
-        return new Pair<>(block, ModItems.registerItem(identifier, (itemSettings) -> new BlockItem(block, itemSettings)));
+        return new Pair<>(block, ModItems.registerItem(identifier, (itemSettings) -> new BlockItem(block, itemSettings.useBlockPrefixedTranslationKey())));
     }
 
 

@@ -53,6 +53,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DARK_OAK_TABLE_SAW);
         addDrop(ModBlocks.MANGROVE_TABLE_SAW);
         addDrop(ModBlocks.CHERRY_TABLE_SAW);
+        addDrop(ModBlocks.PALE_OAK_TABLE_SAW);
         addDrop(ModBlocks.BAMBOO_TABLE_SAW);
         addDrop(ModBlocks.CRIMSON_TABLE_SAW);
         addDrop(ModBlocks.WARPED_TABLE_SAW);
@@ -79,6 +80,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DARK_OAK_WOOD_FRAMEWORK, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
         addDrop(ModBlocks.MANGROVE_WOOD_FRAMEWORK, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
         addDrop(ModBlocks.CHERRY_WOOD_FRAMEWORK, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
+        addDrop(ModBlocks.PALE_OAK_WOOD_FRAMEWORK, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
         addDrop(ModBlocks.BAMBOO_FRAMEWORK, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
         addDrop(ModBlocks.CRIMSON_HYPHAE_FRAMEWORK, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
         addDrop(ModBlocks.WARPED_HYPHAE_FRAMEWORK, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
@@ -91,6 +93,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ECO_FRIENDLY_DARK_OAK_WOOD_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
         addDrop(ModBlocks.ECO_FRIENDLY_MANGROVE_WOOD_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
         addDrop(ModBlocks.ECO_FRIENDLY_CHERRY_WOOD_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
+        addDrop(ModBlocks.ECO_FRIENDLY_PALE_OAK_WOOD_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
         addDrop(ModBlocks.ECO_FRIENDLY_BAMBOO_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
         addDrop(ModBlocks.ECO_FRIENDLY_CRIMSON_HYPHAE_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
         addDrop(ModBlocks.ECO_FRIENDLY_WARPED_HYPHAE_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
@@ -103,6 +106,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ECO_FRIENDLY_DARK_OAK_PLANK_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
         addDrop(ModBlocks.ECO_FRIENDLY_MANGROVE_PLANK_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
         addDrop(ModBlocks.ECO_FRIENDLY_CHERRY_PLANK_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
+        addDrop(ModBlocks.ECO_FRIENDLY_PALE_OAK_PLANK_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
         addDrop(ModBlocks.ECO_FRIENDLY_BAMBOO_PLANK_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
         addDrop(ModBlocks.ECO_FRIENDLY_CRIMSON_PLANK_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
         addDrop(ModBlocks.ECO_FRIENDLY_WARPED_PLANK_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
@@ -116,6 +120,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ECO_FRIENDLY_DARK_OAK_LEAF_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithSilkTouchOrShearsCondition()));
         addDrop(ModBlocks.ECO_FRIENDLY_MANGROVE_LEAF_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithSilkTouchOrShearsCondition()));
         addDrop(ModBlocks.ECO_FRIENDLY_CHERRY_LEAF_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithSilkTouchOrShearsCondition()));
+        addDrop(ModBlocks.ECO_FRIENDLY_PALE_OAK_LEAF_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithSilkTouchOrShearsCondition()));
         addDrop(ModBlocks.ECO_FRIENDLY_AZALEA_LEAF_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithSilkTouchOrShearsCondition()));
         addDrop(ModBlocks.ECO_FRIENDLY_FLOWERING_AZALEA_LEAF_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithSilkTouchOrShearsCondition()));
 
@@ -123,6 +128,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ECO_FRIENDLY_NETHER_WART_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
         addDrop(ModBlocks.ECO_FRIENDLY_WARPED_WART_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
         addDrop(ModBlocks.ECO_FRIENDLY_MOSS_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
+        addDrop(ModBlocks.ECO_FRIENDLY_PALE_MOSS_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createWithoutSilkTouchCondition()));
         addDrop(ModBlocks.ECO_FRIENDLY_GRASS_VENEERS, (Block block) -> this.multifaceGrowthDrops((Block)block, this.createSilkTouchCondition()));
 
 
@@ -135,6 +141,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DARK_OAK_WOOD_WALL);
         addDrop(ModBlocks.MANGROVE_WOOD_WALL);
         addDrop(ModBlocks.CHERRY_WOOD_WALL);
+        addDrop(ModBlocks.PALE_OAK_WOOD_WALL);
         addDrop(ModBlocks.BAMBOO_STEM_WALL);
         addDrop(ModBlocks.CRIMSON_HYPHAE_WALL);
         addDrop(ModBlocks.WARPED_HYPHAE_WALL);
@@ -147,6 +154,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DARK_OAK_PLANK_WALL);
         addDrop(ModBlocks.MANGROVE_PLANK_WALL);
         addDrop(ModBlocks.CHERRY_PLANK_WALL);
+        addDrop(ModBlocks.PALE_OAK_PLANK_WALL);
         addDrop(ModBlocks.BAMBOO_PLANK_WALL);
         addDrop(ModBlocks.CRIMSON_PLANK_WALL);
         addDrop(ModBlocks.WARPED_PLANK_WALL);
@@ -160,6 +168,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DARK_OAK_WOOD_FENCE);
         addDrop(ModBlocks.MANGROVE_WOOD_FENCE);
         addDrop(ModBlocks.CHERRY_WOOD_FENCE);
+        addDrop(ModBlocks.PALE_OAK_WOOD_FENCE);
         addDrop(ModBlocks.BAMBOO_STEM_FENCE);
         addDrop(ModBlocks.CRIMSON_HYPHAE_FENCE);
         addDrop(ModBlocks.WARPED_HYPHAE_FENCE); 
@@ -172,6 +181,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DARK_OAK_WOOD_FENCE_GATE);
         addDrop(ModBlocks.MANGROVE_WOOD_FENCE_GATE);
         addDrop(ModBlocks.CHERRY_WOOD_FENCE_GATE);
+        addDrop(ModBlocks.PALE_OAK_WOOD_FENCE_GATE);
         addDrop(ModBlocks.BAMBOO_STEM_FENCE_GATE);
         addDrop(ModBlocks.CRIMSON_HYPHAE_FENCE_GATE);
         addDrop(ModBlocks.WARPED_HYPHAE_FENCE_GATE);
@@ -185,6 +195,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DARK_OAK_WOOD_STAIRS);
         addDrop(ModBlocks.MANGROVE_WOOD_STAIRS);
         addDrop(ModBlocks.CHERRY_WOOD_STAIRS);
+        addDrop(ModBlocks.PALE_OAK_WOOD_STAIRS);
         addDrop(ModBlocks.BAMBOO_STEM_STAIRS);
         addDrop(ModBlocks.CRIMSON_HYPHAE_STAIRS);
         addDrop(ModBlocks.WARPED_HYPHAE_STAIRS);
@@ -197,6 +208,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DARK_OAK_WOOD_SLAB, slabDrops(ModBlocks.DARK_OAK_WOOD_SLAB));
         addDrop(ModBlocks.MANGROVE_WOOD_SLAB, slabDrops(ModBlocks.MANGROVE_WOOD_SLAB));
         addDrop(ModBlocks.CHERRY_WOOD_SLAB, slabDrops(ModBlocks.CHERRY_WOOD_SLAB));
+        addDrop(ModBlocks.PALE_OAK_WOOD_SLAB, slabDrops(ModBlocks.PALE_OAK_WOOD_SLAB));
         addDrop(ModBlocks.BAMBOO_STEM_SLAB, slabDrops(ModBlocks.BAMBOO_STEM_SLAB));
         addDrop(ModBlocks.CRIMSON_HYPHAE_SLAB, slabDrops(ModBlocks.CRIMSON_HYPHAE_SLAB));
         addDrop(ModBlocks.WARPED_HYPHAE_STAIRS, slabDrops(ModBlocks.WARPED_HYPHAE_SLAB));

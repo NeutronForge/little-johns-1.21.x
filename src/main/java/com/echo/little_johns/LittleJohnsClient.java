@@ -26,6 +26,7 @@ public class LittleJohnsClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ECO_FRIENDLY_DARK_OAK_LEAF_VENEERS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ECO_FRIENDLY_MANGROVE_LEAF_VENEERS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ECO_FRIENDLY_CHERRY_LEAF_VENEERS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ECO_FRIENDLY_PALE_OAK_LEAF_VENEERS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ECO_FRIENDLY_AZALEA_LEAF_VENEERS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ECO_FRIENDLY_FLOWERING_AZALEA_LEAF_VENEERS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ECO_FRIENDLY_BAMBOO_LEAF_VENEERS, RenderLayer.getCutout());
@@ -38,6 +39,7 @@ public class LittleJohnsClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DARK_OAK_TABLE_SAW, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MANGROVE_TABLE_SAW, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CHERRY_TABLE_SAW, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PALE_OAK_TABLE_SAW, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BAMBOO_TABLE_SAW, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CRIMSON_TABLE_SAW, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WARPED_TABLE_SAW, RenderLayer.getCutout());
