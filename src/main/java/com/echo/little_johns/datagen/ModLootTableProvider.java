@@ -1,10 +1,12 @@
 package com.echo.little_johns.datagen;
 
 import com.echo.little_johns.block.ModBlocks;
+
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.data.server.loottable.BlockLootTableGenerator;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
@@ -155,6 +157,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.BAMBOO_LEAVES, block -> this.leavesDrops(block, Blocks.BAMBOO, SAPLING_DROP_CHANCE));
 
+        addDrop(ModBlocks.AWAKENED_TORCHFLOWER);
+        addPottedPlantDrops(ModBlocks.POTTED_AWAKENED_TORCHFLOWER);
+
 
 
         addDrop(ModBlocks.OAK_WOOD_WALL);
@@ -240,5 +245,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
 
     }
+
+
 
 }

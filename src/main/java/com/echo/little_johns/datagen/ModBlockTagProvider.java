@@ -17,7 +17,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
 
+        getOrCreateTagBuilder(BlockTags.FLOWERS)
+                .add(ModBlocks.AWAKENED_TORCHFLOWER);
 
+        getOrCreateTagBuilder(BlockTags.SMALL_FLOWERS)
+                .add(ModBlocks.AWAKENED_TORCHFLOWER);
+
+        getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
+                .add(ModBlocks.POTTED_AWAKENED_TORCHFLOWER);
 
         // PICKAXE MINEABLE
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)

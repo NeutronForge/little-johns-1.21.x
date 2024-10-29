@@ -208,6 +208,9 @@ public class ModItems {
 
             content.addAfter(Items.GRASS_BLOCK, ModBlocks.ECO_FRIENDLY_GRASS_VENEERS);
 
+
+            content.addAfter(Items.TORCHFLOWER, ModBlocks.AWAKENED_TORCHFLOWER);
+
         });
 
     }

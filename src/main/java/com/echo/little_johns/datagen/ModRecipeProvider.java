@@ -8,10 +8,7 @@ import net.minecraft.advancement.AdvancementCriterion;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.server.recipe.RecipeExporter;
-import net.minecraft.data.server.recipe.RecipeGenerator;
-import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
-import net.minecraft.data.server.recipe.StonecuttingRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
@@ -529,6 +526,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerChainRecipe(ModBlocks.GOLDEN_CHAIN, Items.GOLD_NUGGET, ModBlocks.GOLDEN_GRAND_CHAIN, 1, "has_golden_chain", exporter);
                 offerChainRecipe(ModBlocks.GOLDEN_GRAND_CHAIN, Items.GOLD_INGOT, ModBlocks.GOLDEN_COLOSSAL_CHAIN, 1, "has_golden_grand_chain", exporter);
 
+
+
+                CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItem(Items.TORCHFLOWER), RecipeCategory.DECORATIONS, ModBlocks.AWAKENED_TORCHFLOWER, 1.25F, 300)
+                        .criterion("has_torchflower", this.conditionsFromItem(Items.TORCHFLOWER))
+                        .offerTo(this.exporter);
             }
 
             private void offerStairsRecipe(ItemConvertible input, ItemConvertible output, String criterion, RecipeExporter exporter) {

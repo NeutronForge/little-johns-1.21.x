@@ -2,12 +2,18 @@ package com.echo.little_johns.datagen;
 
 import com.echo.little_johns.block.ModBlocks;
 import com.echo.little_johns.item.ModItems;
+import com.google.gson.JsonElement;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
+import net.minecraft.data.client.*;
+import net.minecraft.item.Item;
+import net.minecraft.util.Identifier;
+
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -16,6 +22,8 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.AWAKENED_TORCHFLOWER, ModBlocks.POTTED_AWAKENED_TORCHFLOWER, BlockStateModelGenerator.TintType.NOT_TINTED);
 
         BlockStateModelGenerator.BlockTexturePool galvanizedSquareSteelPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GALVANIZED_SQUARE_STEEL_BLOCK);
         galvanizedSquareSteelPool.stairs(ModBlocks.GALVANIZED_SQUARE_STEEL_STAIRS);
@@ -223,7 +231,6 @@ public class ModModelProvider extends FabricModelProvider {
 
         BlockStateModelGenerator.BlockTexturePool paleMossPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.PALE_MOSS_BLOCK);
         paleMossPool.wall(ModBlocks.PALE_MOSS_HEDGE);
-
 
 
 

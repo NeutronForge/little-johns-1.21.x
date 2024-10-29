@@ -6,7 +6,9 @@ import com.echo.little_johns.item.ModItems;
 import com.echo.little_johns.sound.ModBlockSoundGroup;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -18,6 +20,12 @@ import net.minecraft.util.Pair;
 import java.util.function.Function;
 
 public class ModBlocks {
+
+
+    // MISC
+    public static final Block BAMBOO_LEAVES = registerBlockWithItem("bamboo_leaves", LeavesBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_LEAVES).nonOpaque()).getLeft();
+    public static final Block AWAKENED_TORCHFLOWER = registerBlockWithItem("awakened_torchflower", settings -> new AwakenedFlowerBlock(StatusEffects.GLOWING, 90.0F, settings), AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.FLOWERING_AZALEA).luminance(state -> 15).offset(AbstractBlock.OffsetType.XZ).pistonBehavior(PistonBehavior.DESTROY).nonOpaque()).getLeft();
+    public static final Block POTTED_AWAKENED_TORCHFLOWER = registerBlockWithItem("potted_awakened_torchflower", settings -> new FlowerPotBlock(ModBlocks.AWAKENED_TORCHFLOWER, settings), createFlowerPotSettings().luminance(state -> 8)).getLeft();
 
 
     // TABLE SAWS
@@ -233,10 +241,6 @@ public class ModBlocks {
 
 
 
-    // MISC
-    public static final Block BAMBOO_LEAVES = registerBlockWithItem("bamboo_leaves", LeavesBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_LEAVES).nonOpaque()).getLeft();
-
-
 
     // CHANDELIERS
     public static final Block CHANDELIER = registerBlockWithItem("chandelier", (settings) -> ModBlocks.createChandelierBlock(settings, MapColor.PALE_YELLOW)).getLeft();
@@ -263,7 +267,9 @@ public class ModBlocks {
         return new ChandelierBlock(settings.solid().requiresTool().mapColor(color).nonOpaque().strength(5.0f, 6.0f).sounds(BlockSoundGroup.CHAIN).luminance(ChandelierBlock.STATE_TO_LUMINANCE).pistonBehavior(PistonBehavior.DESTROY));
     }
 
-
+    public static AbstractBlock.Settings createFlowerPotSettings() {
+        return AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY);
+    }
 
 
     // ----------------- //

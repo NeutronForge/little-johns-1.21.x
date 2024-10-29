@@ -120,6 +120,9 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 
         translationBuilder.add(ModBlocks.BAMBOO_LEAVES, "Bamboo Leaves");
 
+        translationBuilder.add(ModBlocks.AWAKENED_TORCHFLOWER, "Awakened Torchflower");
+        translationBuilder.add(ModBlocks.POTTED_AWAKENED_TORCHFLOWER, "Potted Awakened Torchflower");
+
 
 
 

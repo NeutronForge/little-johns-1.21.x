@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "little_johns:block/awakened_torchflower"
+  }
+}
