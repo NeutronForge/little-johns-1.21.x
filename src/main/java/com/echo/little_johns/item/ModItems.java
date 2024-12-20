@@ -291,7 +291,7 @@ public class ModItems {
             content.addAfter(ModBlocks.DARK_OAK_WOOD_FENCE_GATE, ModBlocks.ECO_FRIENDLY_DARK_OAK_WOOD_VENEERS);
             content.addAfter(ModBlocks.ECO_FRIENDLY_DARK_OAK_WOOD_VENEERS, ModBlocks.DARK_OAK_WOOD_FRAMEWORK);
             content.addAfter(Items.DARK_OAK_SLAB, ModBlocks.DARK_OAK_PLANK_WALL);
-            content.addAfter(Items.DARK_OAK_FENCE_GATE, ModBlocks.ECO_FRIENDLY_OAK_PLANK_VENEERS);
+            content.addAfter(Items.DARK_OAK_FENCE_GATE, ModBlocks.ECO_FRIENDLY_DARK_OAK_PLANK_VENEERS);
         });
 
         //Mangrove
